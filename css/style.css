@@ -193,6 +193,12 @@ a :hover {
           animation: noise 1s steps(2) infinite;
 }
 
+@media all and (max-width: 700px) {
+  .noise {
+    display: none !important;
+  }
+}
+
 @-webkit-keyframes noise {
   0% {
     -webkit-transform: translate3d(0, 9rem, 0);
