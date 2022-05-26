@@ -507,6 +507,12 @@ a :hover {
   background: black;
 }
 
+@media all and (max-width: 1000px) {
+  .carousel .block_images .cover_img .btn_box {
+    opacity: 0.3;
+  }
+}
+
 .carousel .block_images .cover_img .btn_box .btn {
   width: 50%;
   height: 100%;
@@ -525,6 +531,12 @@ a :hover {
 
 .carousel .block_images .cover_img .btn_box .theme {
   background: #001DFD;
+}
+
+@media all and (max-width: 1000px) {
+  .carousel .block_images .cover_img .btn_box .theme {
+    background: rgba(0, 0, 0, 0.158);
+  }
 }
 
 .carousel .block_images .images {
@@ -645,6 +657,12 @@ a :hover {
 @media all and (max-width: 1111px) {
   .carousel .block_text .struct {
     width: 80%;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .carousel .block_text .struct {
+    width: 90%;
   }
 }
 
