@@ -1,0 +1,99 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  position: fixed;
+  z-index: 999;
+  .struct {
+    width: 85%;
+    @media all and (max-width:1111px){
+        width: 90%;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .logo {
+      height: 1.7em;
+      @media all and (max-width: 1000px) {
+        height: 1.3em;
+      }
+      img {
+        height: 100%;
+        width: auto;
+      }
+      .white{
+          display: none;
+          @media all and (max-width: 1000px) {
+            display: inline-block;
+          }
+      }
+
+      .colorful{
+        @media all and (max-width: 1000px) {
+            display: none;
+          }
+      }
+    }
+
+    $btn_menu_width:45px;
+
+    .btn_menu {
+      width: $btn_menu_width;
+      height:  $btn_menu_width;
+      background: $theme 0% 0% no-repeat padding-box;
+      border-radius: 46px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      @media all and (max-width: 1000px) {
+        width:35px;
+        height: 35px;
+
+      }
+
+      span{
+          display: block;
+          width: 50%;
+          background: white;
+          height: 2px;
+          margin-bottom: 2px;
+          margin-top: 2px;
+          position: relative;
+          z-index: 2;
+          
+      }
+      .layer{
+          transform: scale(0);
+          transition: 0.3s;
+      }
+
+      &:hover{
+        transition: 0.3s;
+        .layer{
+            transform: scale(1);
+            transition: 0.3s;
+        }
+      }
+
+    }
+  }
+}
+
+
+.layer{
+    display: block;
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    background: #1C1D22;
+    z-index: 0;
+    transition: 0.3s;
+}
