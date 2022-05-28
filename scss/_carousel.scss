@@ -107,6 +107,9 @@
       position: absolute;
 
       width: 1.5em;
+      @media all and (max-width: 1000px) {
+        width: 14px;
+      }
       top: 50%;
       right: 3%;
       transform: translateY(-50%);
@@ -118,7 +121,9 @@
         height: 0.13em;
         margin-bottom: 19px;
         transition: 0.3s ease;
-
+        @media all and (max-width: 1000px) {
+          margin-bottom: 8px;
+        }
         &:hover {
           width: 100%;
           background: white;
