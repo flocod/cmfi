@@ -76,6 +76,7 @@ a :hover {
 .link {
   position: relative;
   z-index: 5;
+  cursor: pointer;
 }
 
 .cursor_container {
@@ -100,7 +101,7 @@ a :hover {
           transform: translateX(-50%) translateY(-50%);
   width: 20px;
   height: 20px;
-  background: #001DFD;
+  background: #0154A1;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,9 +152,7 @@ a :hover {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: #001DFD;
-  -webkit-filter: saturate(200%);
-          filter: saturate(200%);
+  background: #0154A1;
   top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -363,7 +362,7 @@ a :hover {
 .header .struct .btn_menu {
   width: 45px;
   height: 45px;
-  background: #001DFD 0% 0% no-repeat padding-box;
+  background: #0154A1 0% 0% no-repeat padding-box;
   border-radius: 46px;
   border-radius: 50%;
   display: -webkit-box;
@@ -425,10 +424,334 @@ a :hover {
   width: 110%;
   height: 110%;
   border-radius: 50%;
-  background: #1C1D22;
+  background: #1c1d22;
   z-index: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.menu_mobil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #0154A1;
+  z-index: 100;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+@media all and (max-width: 700px) {
+  .menu_mobil {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+.menu_mobil .struct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85%;
+}
+
+@media all and (max-width: 700px) {
+  .menu_mobil .struct {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 130px;
+  }
+}
+
+.menu_mobil .struct .menu_left {
+  display: block;
+  width: 23%;
+}
+
+@media all and (max-width: 1499px) {
+  .menu_mobil .struct .menu_left {
+    display: none;
+  }
+}
+
+.menu_mobil .struct .menu_left .menu_left_item {
+  font: normal normal 300 1em Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  opacity: 0.9;
+}
+
+.menu_mobil .struct .menu_left .menu_left_item_big {
+  font: normal normal 600 1.9em Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.menu_mobil .struct .menu_navigation {
+  display: block;
+  margin-left: 15%;
+  position: relative;
+}
+
+@media all and (max-width: 1499px) {
+  .menu_mobil .struct .menu_navigation {
+    margin-left: 0%;
+  }
+}
+
+.menu_mobil .struct .menu_navigation .item_nav {
+  font: normal normal 500 2em Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 0.44;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+@media all and (max-width: 700px) {
+  .menu_mobil .struct .menu_navigation .item_nav {
+    font: normal normal 300 1.3em Poppins;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+@media all and (max-width: 454px) {
+  .menu_mobil .struct .menu_navigation .item_nav {
+    margin-left: 10px;
+  }
+}
+
+.menu_mobil .struct .menu_navigation .item_nav::before {
+  content: attr(number);
+  font: normal normal 300 0.4em/0.5em Montserrat;
+  letter-spacing: 0px;
+  color: #d6f5ff;
+  position: absolute;
+  top: 30%;
+  left: -35px;
+}
+
+@media all and (max-width: 700px) {
+  .menu_mobil .struct .menu_navigation .item_nav::before {
+    font: normal normal 300 0.4em Poppins;
+    left: -15px;
+  }
+}
+
+.menu_mobil .struct .menu_navigation .item_nav:hover {
+  opacity: 1;
+}
+
+.menu_mobil .struct .menu_navigation .menu_navigation_add {
+  display: none;
+}
+
+@media all and (max-width: 700px) {
+  .menu_mobil .struct .menu_navigation .menu_navigation_add {
+    display: block;
+  }
+}
+
+.menu_mobil .struct .menu_navigation .active {
+  opacity: 1;
+}
+
+.menu_mobil .struct .menu_navigation .menu_navigation_aside {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -50%;
+  border-left: 1px solid #ffffff83;
+  height: 100%;
+}
+
+@media all and (max-width: 700px) {
+  .menu_mobil .struct .menu_navigation .menu_navigation_aside {
+    display: none;
+  }
+}
+
+.menu_mobil .struct .menu_navigation .menu_navigation_aside .item_aside {
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 30px;
+  width: 200px;
+}
+
+.menu_mobil .struct .menu_navigation .menu_navigation_aside .item_aside span {
+  display: block;
+  font: normal normal 300 0.9em Poppins;
+  letter-spacing: 0px;
+  color: #fffffff3;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.menu_mobil .contact_tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85%;
+  margin-top: 10vh;
+}
+
+@media all and (max-width: 1033px) {
+  .menu_mobil .contact_tools {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .menu_mobil .contact_tools {
+    margin-bottom: 40px;
+  }
+}
+
+.menu_mobil .contact_tools .menu_social {
+  display: block;
+}
+
+@media all and (max-width: 1033px) {
+  .menu_mobil .contact_tools .menu_social {
+    margin-bottom: 30px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .menu_mobil .contact_tools .menu_social {
+    margin-bottom: 10px;
+  }
+}
+
+.menu_mobil .contact_tools .menu_social span {
+  font: normal normal 600 1.1em Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+@media all and (max-width: 496px) {
+  .menu_mobil .contact_tools .menu_social span {
+    font: normal normal 600 0.7em Poppins;
+  }
+}
+
+.menu_mobil .contact_tools .menu_contact {
+  display: block;
+}
+
+.menu_mobil .contact_tools .menu_contact span {
+  font: normal normal 600 1.1em Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.menu_mobil .contact_tools .menu_contact .tel {
+  font: normal normal 300 17px/28px Montserrat;
+}
+
+@media all and (max-width: 496px) {
+  .menu_mobil .contact_tools .menu_contact .tel {
+    font: normal normal 600 0.7em Poppins;
+  }
+}
+
+.menu_mobil .contact_tools .menu_contact .mail {
+  font: normal normal 600 17px/28px Poppins;
+}
+
+@media all and (max-width: 496px) {
+  .menu_mobil .contact_tools .menu_contact .mail {
+    font: normal normal 600 0.7em Poppins;
+  }
+}
+
+.menu_mobil .time_direction {
+  position: fixed !important;
+  font: normal normal normal 6.4em Alfa Slab One;
+  letter-spacing: 0px;
+  color: #ffffff18;
+  right: 0px;
+  top: 50%;
+  text-align: center;
+  word-break: keep-all;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  line-height: 90px;
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+          transform: translateY(-50%) rotate(-180deg);
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: sideways;
+}
+
+@media all and (max-width: 1033px) {
+  .menu_mobil .time_direction {
+    font: normal normal normal 4.4em Alfa Slab One;
+    line-height: 60px;
+  }
+}
+
+@media all and (max-width: 454px) {
+  .menu_mobil .time_direction {
+    color: #ffffff07;
+  }
+}
+
+.menu_mobil_on {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .carousel {
@@ -536,7 +859,7 @@ a :hover {
 }
 
 .carousel .block_images .cover_img .btn_box .theme {
-  background: #001DFD;
+  background: #0154A1;
 }
 
 @media all and (max-width: 1000px) {
@@ -567,8 +890,8 @@ a :hover {
      object-fit: cover;
   top: 0%;
   left: 0px;
-  -webkit-transform: translateX(50%) scale(350%) skew(0deg);
-          transform: translateX(50%) scale(350%) skew(0deg);
+  -webkit-transform: translateX(0%) scale(1) skew(0deg);
+          transform: translateX(0%) scale(1) skew(0deg);
   -webkit-transition: opacity 2s ease, -webkit-transform 2.5s ease;
   transition: opacity 2s ease, -webkit-transform 2.5s ease;
   transition: transform 2.5s ease, opacity 2s ease;
@@ -674,7 +997,7 @@ a :hover {
 
 .carousel .block_text .struct .tag {
   font: normal normal normal 1.5em Poppins;
-  color: #001DFD;
+  color: #0154A1;
 }
 
 @media all and (max-width: 617px) {
@@ -741,7 +1064,7 @@ a :hover {
   width: 15%;
   height: 100%;
   display: block;
-  background: #001DFD;
+  background: #0154A1;
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }
@@ -794,7 +1117,7 @@ a :hover {
           justify-content: center;
   height: 80%;
   width: 0.12em;
-  background: #001DFD;
+  background: #0154A1;
   position: relative;
 }
 
@@ -803,7 +1126,7 @@ a :hover {
   width: 0.8em;
   height: 0.8em;
   border-radius: 50%;
-  background: #001DFD;
+  background: #0154A1;
   position: absolute;
   bottom: 0px;
   left: 50%;
@@ -814,7 +1137,7 @@ a :hover {
 .carousel .tige_tools .tige1 .btn_theme {
   width: 1.4em;
   height: 3.5em;
-  background: #001DFD 0% 0% no-repeat padding-box;
+  background: #0154A1 0% 0% no-repeat padding-box;
   border-radius: 29px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -910,7 +1233,7 @@ a :hover {
 }
 
 .carousel .tige_tools .social span {
-  color: #001DFD;
+  color: #0154A1;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;

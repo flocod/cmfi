@@ -132,3 +132,18 @@ function animecarouss() {
 }
 
 setInterval(animecarouss, 10000);
+
+menu_mobil_state=0;
+$('.btn_menu').on('click',()=>{
+    $('.menu_mobil').toggleClass('menu_mobil_on');
+    
+    if(menu_mobil_state == 0){
+        $('.colorful').css('display','none');
+        $('.white').css('display','inline-block');
+        menu_mobil_state= 1;
+    }else{
+        $('.colorful').css('display','inline-block');
+        $('.white').css('display','none');
+        menu_mobil_state= 0;
+    }
+})

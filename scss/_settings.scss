@@ -2,8 +2,8 @@
 // $theme: #001DFD;
 // $theme: crimson;
 // $theme: #001DFD;
-$theme: #001DFD;
-// $theme: #0154A1;
+//  $theme: #001DFD;
+$theme: #0154A1;
 //polices
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
@@ -81,6 +81,7 @@ a {
 .link{
   position: relative;
   z-index: 5;
+  cursor: pointer;
 &:hover{
   // mix-blend-mode:luminosity;
 }
@@ -144,8 +145,6 @@ a {
   height: 80px;
   border-radius: 50%;
   background: $theme;
-
-  filter: saturate(200%);
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
