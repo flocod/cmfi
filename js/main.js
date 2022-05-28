@@ -147,3 +147,68 @@ $('.btn_menu').on('click',()=>{
         menu_mobil_state= 0;
     }
 })
+
+
+
+// menu mobile animation images
+
+
+CURRENT_LAYER='image_layer1';
+$(document).ready(function () {
+  $('.menu_navigation .item_nav').on('mouseenter',function(){
+
+      let num= $(this).attr('number');
+  
+      // if(num=='01'){
+      //   $('.image_layer').removeClass('image_layer_active');
+      //   $('.image_layer1').addClass('image_layer_active');
+      //   CURRENT_LAYER='.image_layer1';
+      // }else if(num=='02'){
+      //   $('.image_layer').removeClass('image_layer_active');
+      //   $('.image_layer2').addClass('image_layer_active');
+      //   CURRENT_LAYER='.image_layer2';
+      // }else if(num=='03'){
+      //   $('.image_layer').removeClass('image_layer_active');
+      //   $('.image_layer3').addClass('image_layer_active');
+      //   CURRENT_LAYER='.image_layer3';
+      // }else if(num=='04'){
+      //   $('.image_layer').removeClass('image_layer_active');
+      //   $('.image_layer4').addClass('image_layer_active');
+      //   CURRENT_LAYER='.image_layer4';
+      // }else if(num=='05'){
+      //   $('.image_layer').removeClass('image_layer_active');
+      //   $('.image_layer5').addClass('image_layer_active');
+      //   CURRENT_LAYER='.image_layer5';
+      // }
+
+      switch (num) {
+        case '01':  $('.image_layer1').addClass('image_layer_active');
+        CURRENT_LAYER='.image_layer1';
+          break;
+        case '02':$('.image_layer2').addClass('image_layer_active');
+        CURRENT_LAYER='.image_layer2';
+          
+          break;
+        case '03':$('.image_layer3').addClass('image_layer_active');
+        CURRENT_LAYER='.image_layer3';
+          
+          break;
+        case '04':$('.image_layer4').addClass('image_layer_active');
+        CURRENT_LAYER='.image_layer4';
+          
+          break;
+        case '05':$('.image_layer5').addClass('image_layer_active');
+        CURRENT_LAYER='.image_layer5';
+          break;
+      }
+    
+    // $('.image_layer').addClass('image_layer_active');
+ 
+  });
+
+
+  $('.menu_navigation .item_nav').on('mouseleave',function(){
+    $('.image_layer').removeClass('image_layer_active');
+  
+  });
+});
