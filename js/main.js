@@ -42,7 +42,6 @@ $(window).on("mousemove", () => {
     TweenLite.to($point, 0.3, {
       width: "150px",
       height: "150px",
-    
     });
     TweenLite.to($cursor, 0.3, {
       width: "200px",
@@ -51,7 +50,7 @@ $(window).on("mousemove", () => {
       border: "none",
     });
   } else {
-    TweenLite.to($point, 0.3, { width: "80px", height: "80px", });
+    TweenLite.to($point, 0.3, { width: "80px", height: "80px" });
     TweenLite.to($cursor, 0.3, {
       width: "20px",
       height: "20px",
@@ -60,19 +59,19 @@ $(window).on("mousemove", () => {
   }
 });
 $(window).on("mousedown", () => {
-    TweenLite.to($cursor, 0.3, {
-        width: "200px",
-        height: "200px",
-        "background-color": "#FBECD7",
-        border: "none",
-      });
+  TweenLite.to($cursor, 0.3, {
+    width: "200px",
+    height: "200px",
+    "background-color": "#FBECD7",
+    border: "none",
+  });
 });
 $(window).on("mouseup", () => {
-    TweenLite.to($cursor, 0.3, {
-        width: "20px",
-        height: "20px",
-        "background-color": "white",
-      });
+  TweenLite.to($cursor, 0.3, {
+    width: "20px",
+    height: "20px",
+    "background-color": "white",
+  });
 });
 
 // carousel
@@ -92,7 +91,6 @@ let carouss_images_indice = {
   indice3: $(".indice3"),
   indice4: $(".indice4"),
 };
-
 
 let statecarous = 0;
 function animecarouss() {
@@ -131,84 +129,124 @@ function animecarouss() {
   }
 }
 
+function animecarouss_left() {
+  switch (statecarous) {
+    case 1:
+      statecarous = 4 - 1;
+      animecarouss();
+
+      break;
+    case 2:
+      statecarous = 1 - 1;
+      animecarouss();
+
+      break;
+    case 3:
+      statecarous = 2 - 1;
+      animecarouss();
+
+      break;
+    case 4:
+      statecarous = 3 - 1;
+      animecarouss();
+
+      break;
+    case 0:
+      statecarous = 4;
+      animecarouss();
+
+      break;
+
+    default:
+      statecarous = 0;
+      animecarouss();
+      break;
+  }
+}
+
+$(".bnt_left_carous").on("click", function () {
+  animecarouss_left();
+});
+$(".bnt_right_carous").on("click", function () {
+  animecarouss();
+});
+
 setInterval(animecarouss, 10000);
 
-menu_mobil_state=0;
-$('.btn_menu').on('click',()=>{
-    $('.menu_mobil').toggleClass('menu_mobil_on');
-    
-    if(menu_mobil_state == 0){
-        $('.colorful').css('display','none');
-        $('.white').css('display','inline-block');
-        menu_mobil_state= 1;
-    }else{
-        $('.colorful').css('display','inline-block');
-        $('.white').css('display','none');
-        menu_mobil_state= 0;
-    }
-})
+menu_mobil_state = 0;
+$(".btn_menu").on("click", () => {
+  $(".menu_mobil").toggleClass("menu_mobil_on");
 
-
+  if (menu_mobil_state == 0) {
+    $(".colorful").css("display", "none");
+    $(".white").css("display", "inline-block");
+    menu_mobil_state = 1;
+  } else {
+    $(".colorful").css("display", "inline-block");
+    $(".white").css("display", "none");
+    menu_mobil_state = 0;
+  }
+});
 
 // menu mobile animation images
 
-
-CURRENT_LAYER='image_layer1';
+CURRENT_LAYER = "image_layer1";
 $(document).ready(function () {
-  $('.menu_navigation .item_nav').on('mouseenter',function(){
+  $(".menu_navigation .item_nav").on("mouseenter", function () {
+    let num = $(this).attr("number");
 
-      let num= $(this).attr('number');
-  
-      // if(num=='01'){
-      //   $('.image_layer').removeClass('image_layer_active');
-      //   $('.image_layer1').addClass('image_layer_active');
-      //   CURRENT_LAYER='.image_layer1';
-      // }else if(num=='02'){
-      //   $('.image_layer').removeClass('image_layer_active');
-      //   $('.image_layer2').addClass('image_layer_active');
-      //   CURRENT_LAYER='.image_layer2';
-      // }else if(num=='03'){
-      //   $('.image_layer').removeClass('image_layer_active');
-      //   $('.image_layer3').addClass('image_layer_active');
-      //   CURRENT_LAYER='.image_layer3';
-      // }else if(num=='04'){
-      //   $('.image_layer').removeClass('image_layer_active');
-      //   $('.image_layer4').addClass('image_layer_active');
-      //   CURRENT_LAYER='.image_layer4';
-      // }else if(num=='05'){
-      //   $('.image_layer').removeClass('image_layer_active');
-      //   $('.image_layer5').addClass('image_layer_active');
-      //   CURRENT_LAYER='.image_layer5';
-      // }
+    // if(num=='01'){
+    //   $('.image_layer').removeClass('image_layer_active');
+    //   $('.image_layer1').addClass('image_layer_active');
+    //   CURRENT_LAYER='.image_layer1';
+    // }else if(num=='02'){
+    //   $('.image_layer').removeClass('image_layer_active');
+    //   $('.image_layer2').addClass('image_layer_active');
+    //   CURRENT_LAYER='.image_layer2';
+    // }else if(num=='03'){
+    //   $('.image_layer').removeClass('image_layer_active');
+    //   $('.image_layer3').addClass('image_layer_active');
+    //   CURRENT_LAYER='.image_layer3';
+    // }else if(num=='04'){
+    //   $('.image_layer').removeClass('image_layer_active');
+    //   $('.image_layer4').addClass('image_layer_active');
+    //   CURRENT_LAYER='.image_layer4';
+    // }else if(num=='05'){
+    //   $('.image_layer').removeClass('image_layer_active');
+    //   $('.image_layer5').addClass('image_layer_active');
+    //   CURRENT_LAYER='.image_layer5';
+    // }
 
-      switch (num) {
-        case '01':  $('.image_layer1').addClass('image_layer_active');
-        CURRENT_LAYER='.image_layer1';
-          break;
-        case '02':$('.image_layer2').addClass('image_layer_active');
-        CURRENT_LAYER='.image_layer2';
-          
-          break;
-        case '03':$('.image_layer3').addClass('image_layer_active');
-        CURRENT_LAYER='.image_layer3';
-          
-          break;
-        case '04':$('.image_layer4').addClass('image_layer_active');
-        CURRENT_LAYER='.image_layer4';
-          
-          break;
-        case '05':$('.image_layer5').addClass('image_layer_active');
-        CURRENT_LAYER='.image_layer5';
-          break;
-      }
-    
+    switch (num) {
+      case "01":
+        $(".image_layer1").addClass("image_layer_active");
+        CURRENT_LAYER = ".image_layer1";
+        break;
+      case "02":
+        $(".image_layer2").addClass("image_layer_active");
+        CURRENT_LAYER = ".image_layer2";
+
+        break;
+      case "03":
+        $(".image_layer3").addClass("image_layer_active");
+        CURRENT_LAYER = ".image_layer3";
+
+        break;
+      case "04":
+        $(".image_layer4").addClass("image_layer_active");
+        CURRENT_LAYER = ".image_layer4";
+
+        break;
+      case "05":
+        $(".image_layer5").addClass("image_layer_active");
+        CURRENT_LAYER = ".image_layer5";
+        break;
+    }
+
     // $('.image_layer').addClass('image_layer_active');
- 
   });
 
-
-  $('.menu_navigation .item_nav').on('mouseleave',function(){
-    $('.image_layer').removeClass('image_layer_active');
-  
+  $(".menu_navigation .item_nav").on("mouseleave", function () {
+    $(".image_layer").removeClass("image_layer_active");
   });
 });
