@@ -110,6 +110,12 @@ a :hover {
   width: 93%;
 }
 
+@media all and (max-width: 425px) {
+  .group_container .struct {
+    width: 94.5%;
+  }
+}
+
 .group_container .struct .title_group {
   display: block;
   width: 100px;
@@ -124,6 +130,12 @@ a :hover {
 @media all and (max-width: 515px) {
   .group_container .struct .title_group {
     width: 45px;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .group_container .struct .title_group {
+    width: 32px;
   }
 }
 
@@ -165,6 +177,12 @@ a :hover {
 @media all and (max-width: 515px) {
   .group_container .struct .title_group .text_title .big_text {
     font: normal normal normal 1.5em Alfa Slab One;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .group_container .struct .title_group .text_title .big_text {
+    font: normal normal normal 1.1em Alfa Slab One;
   }
 }
 
@@ -232,6 +250,14 @@ a :hover {
   }
 }
 
+@media all and (max-width: 425px) {
+  .group_container .struct .title_group .controllers_box .btn {
+    width: 23px;
+    height: 23px;
+    font-size: 0.45em;
+  }
+}
+
 .group_container .struct .group_size {
   width: calc(100% - 100px);
 }
@@ -245,6 +271,12 @@ a :hover {
 @media all and (max-width: 515px) {
   .group_container .struct .group_size {
     width: calc(100% - 45px);
+  }
+}
+
+@media all and (max-width: 425px) {
+  .group_container .struct .group_size {
+    width: calc(100% - 32px);
   }
 }
 
