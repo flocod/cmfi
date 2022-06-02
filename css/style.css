@@ -21,6 +21,7 @@ Black 900
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  background: #f7f7f7;
 }
 
 * {
@@ -77,6 +78,186 @@ a :hover {
   position: relative;
   z-index: 5;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.group_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.group_container .struct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 93%;
+}
+
+.group_container .struct .title_group {
+  display: block;
+  width: 100px;
+}
+
+@media all and (max-width: 700px) {
+  .group_container .struct .title_group {
+    width: 60px;
+  }
+}
+
+@media all and (max-width: 515px) {
+  .group_container .struct .title_group {
+    width: 45px;
+  }
+}
+
+.group_container .struct .title_group .text_title {
+  display: block;
+}
+
+.group_container .struct .title_group .text_title .big_text {
+  display: block;
+  word-break: keep-all;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  text-align: right;
+  -webkit-transform: translateY(0%) rotate(-180deg);
+          transform: translateY(0%) rotate(-180deg);
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: sideways;
+  position: relative;
+  font: normal normal normal 3.5em Alfa Slab One;
+  letter-spacing: 0px;
+  color: #e8e8e9;
+}
+
+@media all and (max-width: 1299px) {
+  .group_container .struct .title_group .text_title .big_text {
+    font: normal normal normal 3em Alfa Slab One;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .group_container .struct .title_group .text_title .big_text {
+    font: normal normal normal 2.3em Alfa Slab One;
+  }
+}
+
+@media all and (max-width: 515px) {
+  .group_container .struct .title_group .text_title .big_text {
+    font: normal normal normal 1.5em Alfa Slab One;
+  }
+}
+
+.group_container .struct .title_group .text_title .big_text:after {
+  content: attr(text);
+  position: absolute;
+  right: -35px;
+  bottom: 0px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font: normal normal normal 40px/54px Alfa Slab One;
+  letter-spacing: 0px;
+  color: #0154a1;
+}
+
+@media all and (max-width: 1299px) {
+  .group_container .struct .title_group .text_title .big_text:after {
+    font: normal normal normal 25px Alfa Slab One;
+    right: -25px;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .group_container .struct .title_group .text_title .big_text:after {
+    display: none;
+  }
+}
+
+.group_container .struct .title_group .controllers_box {
+  display: block;
+  margin-top: 50px;
+}
+
+@media all and (max-width: 515px) {
+  .group_container .struct .title_group .controllers_box {
+    margin-top: 30px;
+  }
+}
+
+.group_container .struct .title_group .controllers_box .btn {
+  width: 65px;
+  height: 65px;
+  background: #0154a1 0% 0% no-repeat padding-box;
+  border-radius: 50%;
+  color: #f7f7f7;
+}
+
+.group_container .struct .title_group .controllers_box .btn:last-child {
+  margin-top: 10px;
+}
+
+@media all and (max-width: 700px) {
+  .group_container .struct .title_group .controllers_box .btn {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media all and (max-width: 515px) {
+  .group_container .struct .title_group .controllers_box .btn {
+    width: 25px;
+    height: 25px;
+    font-size: 0.5em;
+  }
+}
+
+.group_container .struct .group_size {
+  width: calc(100% - 100px);
+}
+
+@media all and (max-width: 700px) {
+  .group_container .struct .group_size {
+    width: calc(100% - 60px);
+  }
+}
+
+@media all and (max-width: 515px) {
+  .group_container .struct .group_size {
+    width: calc(100% - 45px);
+  }
+}
+
+.margin_group_container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media all and (max-width: 515px) {
+  .margin_group_container {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 }
 
 .cursor_container {
@@ -101,7 +282,7 @@ a :hover {
           transform: translateX(-50%) translateY(-50%);
   width: 20px;
   height: 20px;
-  background: #0154A1;
+  background: #0154a1;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,6 +299,18 @@ a :hover {
   .cursor {
     display: none;
   }
+}
+
+.flex_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contain_cursor {
@@ -152,7 +345,7 @@ a :hover {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: #0154A1;
+  background: #0154a1;
   top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -345,6 +538,15 @@ a :hover {
 .header .struct .logo img {
   height: 100%;
   width: auto;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.header .struct .logo .off {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
 }
 
 .header .struct .logo .white {
@@ -366,7 +568,7 @@ a :hover {
 .header .struct .btn_menu {
   width: 45px;
   height: 45px;
-  background: #0154A1 0% 0% no-repeat padding-box;
+  background: #0154a1 0% 0% no-repeat padding-box;
   border-radius: 46px;
   border-radius: 50%;
   display: -webkit-box;
@@ -455,7 +657,7 @@ a :hover {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #0154A1;
+  background: #0154a1;
   z-index: 100;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
@@ -972,7 +1174,7 @@ a :hover {
 }
 
 .carousel .block_images .cover_img .btn_box .theme {
-  background: #0154A1;
+  background: #0154a1;
 }
 
 @media all and (max-width: 1000px) {
@@ -1122,7 +1324,7 @@ a :hover {
 
 .carousel .block_text .struct .tag {
   font: normal normal normal 1.5em Poppins;
-  color: #0154A1;
+  color: #0154a1;
 }
 
 @media all and (max-width: 617px) {
@@ -1189,7 +1391,7 @@ a :hover {
   width: 15%;
   height: 100%;
   display: block;
-  background: #0154A1;
+  background: #0154a1;
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }
@@ -1242,7 +1444,7 @@ a :hover {
           justify-content: center;
   height: 80%;
   width: 0.12em;
-  background: #0154A1;
+  background: #0154a1;
   position: relative;
 }
 
@@ -1251,7 +1453,7 @@ a :hover {
   width: 0.8em;
   height: 0.8em;
   border-radius: 50%;
-  background: #0154A1;
+  background: #0154a1;
   position: absolute;
   bottom: 0px;
   left: 50%;
@@ -1262,7 +1464,7 @@ a :hover {
 .carousel .tige_tools .tige1 .btn_theme {
   width: 1.4em;
   height: 3.5em;
-  background: #0154A1 0% 0% no-repeat padding-box;
+  background: #0154a1 0% 0% no-repeat padding-box;
   border-radius: 29px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1358,7 +1560,7 @@ a :hover {
 }
 
 .carousel .tige_tools .social span {
-  color: #0154A1;
+  color: #0154a1;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1403,4 +1605,364 @@ a :hover {
   .carousel .radio_box {
     display: none;
   }
+}
+
+.group_last_news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.group_last_news .last_news_box {
+  width: 98%;
+  height: 550px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 3px solid #1c1d22;
+  border-radius: 26px;
+}
+
+@media all and (max-width: 515px) {
+  .group_last_news .last_news_box {
+    height: 370px;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .group_last_news .last_news_box {
+    border: 1.5px solid #1c1d22;
+    border-radius: 12px;
+    height: 335px;
+  }
+}
+
+.group_last_news .last_news_box .struct {
+  display: block;
+  width: 92%;
+  height: auto;
+}
+
+.group_last_news .last_news_box .struct .img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 24px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+@media all and (max-width: 586px) {
+  .group_last_news .last_news_box .struct .img {
+    border-radius: 10px;
+  }
+}
+
+@media all and (max-width: 515px) {
+  .group_last_news .last_news_box .struct .img {
+    height: 200px;
+    margin-top: 15px;
+  }
+}
+
+.group_last_news .last_news_box .struct .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.group_last_news .last_news_box .struct .text_desc {
+  display: block;
+  margin-top: 35px;
+  padding-bottom: 25px;
+  border-bottom: 3px solid #1c1d22;
+}
+
+@media all and (max-width: 515px) {
+  .group_last_news .last_news_box .struct .text_desc {
+    margin-top: 0px;
+    padding-bottom: 10px;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .group_last_news .last_news_box .struct .text_desc {
+    border-bottom: 1.5px solid #1c1d22;
+  }
+}
+
+.group_last_news .last_news_box .struct .text_desc .tag {
+  font: normal normal normal 1.2em Alfa Slab One;
+  letter-spacing: 0px;
+  color: #1c1d22;
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 515px) {
+  .group_last_news .last_news_box .struct .text_desc .tag {
+    font: normal normal normal 1em Alfa Slab One;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .group_last_news .last_news_box .struct .text_desc .tag {
+    font: normal normal normal 0.7em Alfa Slab One;
+    margin-bottom: 5px;
+  }
+}
+
+.group_last_news .last_news_box .struct .text_desc .text {
+  font: normal normal 600 1.06em Poppins;
+  letter-spacing: 0px;
+  color: #1c1d22;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media all and (max-width: 515px) {
+  .group_last_news .last_news_box .struct .text_desc .text {
+    font: normal normal 600 0.8em Poppins;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .group_last_news .last_news_box .struct .text_desc .text {
+    font: normal normal 600 0.6em Poppins;
+  }
+}
+
+.group_last_news .last_news_box .struct .states {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+@media all and (max-width: 515px) {
+  .group_last_news .last_news_box .struct .states {
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+}
+
+.group_last_news .last_news_box .struct .states .views {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.group_last_news .last_news_box .struct .states .views .ico {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+@media all and (max-width: 515px) {
+  .group_last_news .last_news_box .struct .states .views .ico {
+    font: normal normal normal 1em Montserrat;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .group_last_news .last_news_box .struct .states .views .ico {
+    font: normal normal 600 0.72em Poppins;
+    margin-right: 4px;
+  }
+}
+
+.group_last_news .last_news_box .struct .states .views .text {
+  font: normal normal bold 16px/24px Montserrat;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #1c1d22;
+}
+
+@media all and (max-width: 515px) {
+  .group_last_news .last_news_box .struct .states .views .text {
+    font: normal normal bold 0.8em Montserrat;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .group_last_news .last_news_box .struct .states .views .text {
+    font: normal normal 900 0.6em Montserrat;
+  }
+}
+
+.group_last_news .last_news_box .struct .states .date {
+  font: normal normal bold 16px/24px Montserrat;
+}
+
+@media all and (max-width: 515px) {
+  .group_last_news .last_news_box .struct .states .date {
+    font: normal normal bold 0.8em Montserrat;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .group_last_news .last_news_box .struct .states .date {
+    font: normal normal 900 0.6em Montserrat;
+  }
+}
+
+.group_last_video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.group_last_video .last_news_video {
+  width: 99%;
+  height: 530px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 3px solid #1c1d22;
+  border-radius: 26px;
+}
+
+@media all and (max-width: 515px) {
+  .group_last_video .last_news_video {
+    width: 98%;
+    height: 370px;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .group_last_video .last_news_video {
+    border: 1.5px solid #1c1d22;
+    border-radius: 12px;
+    height: 280px;
+  }
+}
+
+.group_last_video .last_news_video .struct {
+  display: block;
+  width: 94%;
+  height: 92%;
+}
+
+.group_last_video .last_news_video .struct .img {
+  display: block;
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+@media all and (max-width: 586px) {
+  .group_last_video .last_news_video .struct .img {
+    border-radius: 10px;
+  }
+}
+
+.group_last_video .last_news_video .struct .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.group_last_video .last_news_video .struct .text_desc {
+  display: block;
+  margin-top: 25px;
+}
+
+@media all and (max-width: 515px) {
+  .group_last_video .last_news_video .struct .text_desc {
+    margin-top: 13px;
+  }
+}
+
+.group_last_video .last_news_video .struct .text_desc .tag {
+  font: normal normal normal 1.2em Alfa Slab One;
+  letter-spacing: 0px;
+  color: #1c1d22;
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 515px) {
+  .group_last_video .last_news_video .struct .text_desc .tag {
+    font: normal normal normal 1em Alfa Slab One;
+    margin-bottom: 5px;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .group_last_video .last_news_video .struct .text_desc .tag {
+    font: normal normal normal 0.7em Alfa Slab One;
+    margin-bottom: 5px;
+  }
+}
+
+.group_last_video .last_news_video .struct .text_desc .text {
+  font: normal normal 600 1.06em Poppins;
+  letter-spacing: 0px;
+  color: #1c1d22;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media all and (max-width: 515px) {
+  .group_last_video .last_news_video .struct .text_desc .text {
+    font: normal normal 600 0.8em Poppins;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .group_last_video .last_news_video .struct .text_desc .text {
+    font: normal normal 600 0.6em Poppins;
+  }
+}
+
+.group_last_video .last_news_video .struct .states {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.group_last_video .last_news_video .struct .states .views .ico {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.group_last_video .last_news_video .struct .states .views .text {
+  font: normal normal bold 16px/24px Montserrat;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #1c1d22;
+}
+
+.group_last_video .last_news_video .struct .states .date {
+  font: normal normal bold 16px/24px Montserrat;
 }

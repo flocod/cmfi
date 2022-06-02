@@ -25,6 +25,12 @@
       img {
         height: 100%;
         width: auto;
+        transition: 0.3s;
+        opacity: 1;
+      }
+      .off{
+        transition: 0.3s;
+        opacity: 0;
       }
       .white {
         display: none;
@@ -90,7 +96,7 @@
   width: 110%;
   height: 110%;
   border-radius: 50%;
-  background: #1c1d22;
+  background: $dark;
   z-index: 0;
   transition: 0.3s;
 }

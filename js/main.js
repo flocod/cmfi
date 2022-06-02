@@ -195,28 +195,6 @@ $(document).ready(function () {
   $(".menu_navigation .item_nav").on("mouseenter", function () {
     let num = $(this).attr("number");
 
-    // if(num=='01'){
-    //   $('.image_layer').removeClass('image_layer_active');
-    //   $('.image_layer1').addClass('image_layer_active');
-    //   CURRENT_LAYER='.image_layer1';
-    // }else if(num=='02'){
-    //   $('.image_layer').removeClass('image_layer_active');
-    //   $('.image_layer2').addClass('image_layer_active');
-    //   CURRENT_LAYER='.image_layer2';
-    // }else if(num=='03'){
-    //   $('.image_layer').removeClass('image_layer_active');
-    //   $('.image_layer3').addClass('image_layer_active');
-    //   CURRENT_LAYER='.image_layer3';
-    // }else if(num=='04'){
-    //   $('.image_layer').removeClass('image_layer_active');
-    //   $('.image_layer4').addClass('image_layer_active');
-    //   CURRENT_LAYER='.image_layer4';
-    // }else if(num=='05'){
-    //   $('.image_layer').removeClass('image_layer_active');
-    //   $('.image_layer5').addClass('image_layer_active');
-    //   CURRENT_LAYER='.image_layer5';
-    // }
-
     switch (num) {
       case "01":
         $(".image_layer1").addClass("image_layer_active");
@@ -249,4 +227,90 @@ $(document).ready(function () {
   $(".menu_navigation .item_nav").on("mouseleave", function () {
     $(".image_layer").removeClass("image_layer_active");
   });
+});
+
+let progress_state;
+$(document).ready(function () {
+  totalheight = document.body.scrollHeight - window.innerHeight;
+  window.onscroll = function () {
+    progress = (window.pageYOffset / totalheight) * 100;
+    progress = Math.round(Number(progress));
+    progress = progress + "%";
+    header = $(".header .img");
+
+    if (progress_state < progress) {
+      $(".header .img").addClass("off");
+
+      console.log("scroll to bottom");
+    } else if (window.pageYOffset == 0) {
+      $(".header .img").removeClass("off");
+      if (window.innerWidth > 1000) {
+        $(".scroll_indice").css("display", "flex");
+      }
+    }
+
+    progress_state = progress;
+  };
+});
+
+function owl_last_news() {
+  owl_last_news = $(".owl_last_news");
+  owl_last_news.owlCarousel({
+    items: 1,
+    // loop: true,
+    nav: false,
+    // autoplay: true,
+    margin: 20,
+    responsive: {
+      600: {
+        items: 1,
+      },
+      1000: {
+        items: 2,
+      },
+      1400: {
+        items: 3,
+      },
+    },
+  });
+
+  $(".owl_last_news_btn_right").click(function () {
+    owl_last_news.trigger("prev.owl.carousel");
+  });
+
+  $(".owl_last_news_btn_left").click(function () {
+    owl_last_news.trigger("next.owl.carousel");
+  });
+}
+
+function owl_last_video() {
+  owl_last_video = $(".owl_last_video");
+  owl_last_video.owlCarousel({
+    items: 1,
+    // loop: true,
+    nav: false,
+    // autoplay: true,
+    margin: 20,
+    responsive: {
+      769: {
+        items: 1,
+      },
+      1041: {
+        items: 2,
+      },
+    },
+  });
+
+  $(".owl_last_video_btn_right").click(function () {
+    owl_last_video.trigger("prev.owl.carousel");
+  });
+
+  $(".owl_last_video_btn_left").click(function () {
+    owl_last_video.trigger("next.owl.carousel");
+  });
+}
+
+$(document).ready(function () {
+  owl_last_news();
+  owl_last_video();
 });

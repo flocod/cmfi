@@ -1,14 +1,15 @@
-// color
+// color2
 // $theme: #001DFD;
 // $theme: crimson;
 // $theme: #001DFD;
 //  $theme: #001DFD;
-$theme: #0154A1;
+$theme: #0154a1;
+$dark: #1c1d22;
 //polices
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Righteous&display=swap");
 /**
 Thin 100
 Extra-light 200
@@ -25,9 +26,11 @@ Black 900
   padding: 0 auto;
   width: 100%;
   height: 100%;
-  overflow-x:hidden;
+  overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+
+  background: #f7f7f7;
 }
 
 * {
@@ -78,17 +81,138 @@ a {
   width: 100%;
 }
 
-.link{
+.link {
   position: relative;
   z-index: 5;
   cursor: pointer;
-&:hover{
-  // mix-blend-mode:luminosity;
+  user-select: none;
+  &:hover {
+    // mix-blend-mode:luminosity;
+  }
 }
+
+.group_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .struct {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 93%;
+
+    .title_group {
+      display: block;
+      width: 100px;
+      @media all and (max-width:700px){
+        width: 60px;
+      }
+      @media all and (max-width:515px){
+        width: 45px;
+      }
+
+      .text_title {
+        display: block;
+        .big_text {
+          display: block;
+          word-break: keep-all;
+          height: max-content;
+          text-align: right;
+
+          transform: translateY(0%) rotate(-180deg);
+          writing-mode: vertical-rl;
+          text-orientation: sideways;
+          position: relative;
+
+          font: normal normal normal 3.5em Alfa Slab One;
+          letter-spacing: 0px;
+          color: #e8e8e9;
+
+          @media all and (max-width:1299px){
+            font: normal normal normal 3em Alfa Slab One;
+          }
+          @media all and (max-width:700px){
+            font: normal normal normal 2.3em Alfa Slab One;
+          }
+          @media all and (max-width:515px){
+            font: normal normal normal 1.5em Alfa Slab One;
+          }
+
+          
+          &:after {
+            content: attr(text);
+            position: absolute;
+            right: -35px;
+            bottom: 0px;
+            height: max-content;
+            font: normal normal normal 40px/54px Alfa Slab One;
+            @media all and (max-width:1299px){
+              font: normal normal normal 25px Alfa Slab One;
+              right: -25px;
+            }
+            letter-spacing: 0px;
+            color: $theme;
+            @media all and (max-width:1000px){
+             display: none;
+            }
+          }
+        }
+      }
+
+      .controllers_box {
+        display: block;
+        margin-top: 50px;
+        @media all and (max-width:515px){
+          margin-top: 30px;
+        }
+        .btn {
+          width: 65px;
+          height: 65px;
+          background: $theme 0% 0% no-repeat padding-box;
+          border-radius: 50%;
+          color: #f7f7f7;
+          &:last-child{
+            margin-top: 10px;
+          }
+
+          @media all and (max-width:700px){
+            width: 45px;
+            height: 45px;
+          }
+
+          @media all and (max-width:515px){
+            width: 25px;
+            height: 25px;
+            font-size: 0.5em;
+          }
+          
+
+        }
+      }
+    }
+
+    .group_size{
+      width: calc(100% - 100px);
+      @media all and (max-width:700px){
+        width: calc(100% - 60px);
+      }
+      @media all and (max-width:515px){
+        width: calc(100% - 45px);
+      }
+    }
+
+  }
 }
 
-
-
+.margin_group_container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @media all and (max-width:515px){
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
 
 .cursor_container {
   position: fixed;
@@ -99,7 +223,7 @@ a {
 
   // background: #121318;
   // cursor style
-  @media all and (max-width:700px){
+  @media all and (max-width: 700px) {
     display: none;
   }
 }
@@ -116,11 +240,16 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  @media all and (max-width:700px){
+  @media all and (max-width: 700px) {
     display: none;
   }
 }
 
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .contain_cursor {
   position: fixed;
   top: 50%;
@@ -134,7 +263,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  @media all and (max-width:700px){
+  @media all and (max-width: 700px) {
     display: none;
   }
 }
@@ -148,12 +277,10 @@ a {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  @media all and (max-width:700px){
+  @media all and (max-width: 700px) {
     display: none;
   }
 }
-
-
 
 /* ------------------------- Grain -------------------------------------------------- */
 
@@ -181,11 +308,44 @@ a {
   pointer-events: none;
   animation: noise 1s steps(2) infinite;
 }
-.noise{
-  @media all and (max-width: 700px){
+.noise {
+  @media all and (max-width: 700px) {
     display: none !important;
   }
 }
 
-@keyframes noise {0%{transform:translate3d(0,9rem,0);}10%{transform:translate3d(-1rem,-4rem,0);}20%{transform:translate3d(-8rem,2rem,0);}30%{transform:translate3d(9rem,-9rem,0);}40%{transform:translate3d(-2rem,7rem,0);}50%{transform:translate3d(-9rem,-4rem,0);}60%{transform:translate3d(2rem,6rem,0);}70%{transform:translate3d(7rem,-8rem,0);}80%{transform:translate3d(-9rem,1rem,0);}90%{transform:translate3d(6rem,-5rem,0);}to{transform:translate3d(-7rem,0,0);}}
-
+@keyframes noise {
+  0% {
+    transform: translate3d(0, 9rem, 0);
+  }
+  10% {
+    transform: translate3d(-1rem, -4rem, 0);
+  }
+  20% {
+    transform: translate3d(-8rem, 2rem, 0);
+  }
+  30% {
+    transform: translate3d(9rem, -9rem, 0);
+  }
+  40% {
+    transform: translate3d(-2rem, 7rem, 0);
+  }
+  50% {
+    transform: translate3d(-9rem, -4rem, 0);
+  }
+  60% {
+    transform: translate3d(2rem, 6rem, 0);
+  }
+  70% {
+    transform: translate3d(7rem, -8rem, 0);
+  }
+  80% {
+    transform: translate3d(-9rem, 1rem, 0);
+  }
+  90% {
+    transform: translate3d(6rem, -5rem, 0);
+  }
+  to {
+    transform: translate3d(-7rem, 0, 0);
+  }
+}

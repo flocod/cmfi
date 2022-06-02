@@ -1,0 +1,146 @@
+.group_last_news {
+  display: flex;
+  justify-content: space-between;
+
+  .last_news_box {
+    width: 98%;
+    height: 550px;
+    @media all and (max-width:515px){
+      height: 370px;
+    }
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 3px solid $dark;
+    border-radius: 26px;
+    @media all and (max-width:425px){
+      border: 1.5px solid $dark;
+      border-radius: 12px;
+      height: 335px;
+    }
+    .struct {
+      display: block;
+      width: 92%;
+      height: auto;
+
+
+      .img {
+        display: block;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 24px;
+        margin-top: 35px;
+        margin-bottom: 15px;
+        @media all and (max-width:586px){
+          border-radius: 10px;
+        }
+        @media all and (max-width:515px){
+          height: 200px;
+          margin-top: 15px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .text_desc {
+        display: block;
+        margin-top: 35px;
+        padding-bottom: 25px;
+        border-bottom: 3px solid $dark;
+        @media all and (max-width:515px){
+          margin-top: 0px;
+        padding-bottom: 10px;
+        }
+        @media all and (max-width:425px){
+          border-bottom: 1.5px solid $dark;
+        }
+
+        .tag {
+          font: normal normal normal 1.2em Alfa Slab One;
+          letter-spacing: 0px;
+          color: $dark;
+          display: block;
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          @media all and (max-width:515px){
+            font: normal normal normal 1em Alfa Slab One;
+          }
+          @media all and (max-width:425px){
+            font: normal normal normal 0.7em Alfa Slab One;
+            margin-bottom: 5px;
+          }
+        }
+        .text {
+          font: normal normal 600 1.06em Poppins;
+          letter-spacing: 0px;
+          color: $dark;
+          display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        @media all and (max-width:515px){
+          font: normal normal 600 0.8em Poppins;
+        }
+        @media all and (max-width:425px){
+          font: normal normal 600 0.6em Poppins;
+        }
+        }
+      }
+
+      .states{
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin-top: 25px;
+          margin-bottom: 10px;
+          @media all and (max-width:515px){
+            margin-top: 15px;
+          margin-bottom: 0px;
+          }
+          .views{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+              .ico{
+                  display: inline-block;
+                  margin-right: 10px;
+                  font-size: 1.2em;
+                  @media all and (max-width:515px){
+                    font: normal normal normal 1em Montserrat;
+                  }
+                  @media all and (max-width:425px){
+                    font: normal normal 600 0.72em Poppins;
+                    margin-right: 4px;
+                  }
+              }
+
+              .text{
+                font: normal normal bold 16px/24px Montserrat;
+                font-weight: bold;
+                letter-spacing: 0px;
+                color: $dark;
+                @media all and (max-width:515px){
+                  font: normal normal bold 0.8em Montserrat;
+                }
+                @media all and (max-width:425px){
+                  font: normal normal 900 0.6em Montserrat;
+                }
+              }
+          }
+
+          .date{
+            font: normal normal bold 16px/24px Montserrat;  
+            @media all and (max-width:515px){
+              font: normal normal bold 0.8em Montserrat;
+            } 
+            @media all and (max-width:425px){
+              font: normal normal 900 0.6em Montserrat;
+            }
+          }
+      }
+
+    }
+  }
+}
