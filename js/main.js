@@ -340,9 +340,48 @@ function owl_cta() {
     owl_cta.trigger("next.owl.carousel");
   });
 }
+function owl_link() {
+  owl_link = $(".owl_link");
+  owl_link.owlCarousel({
+    items: 1,
+    loop: true,
+    center:false,
+    nav: false,
+    autoplay: true,
+    margin: 20,
+    responsive: {
+      200: {
+        items: 1,
+        margin: 7,
+      },
+      361: {
+        items: 2,
+       
+      },
+      1083: {
+        items: 3,
+        margin: 7,
+      },
+      1400: {
+        items: 4,
+       
+      },
+    },
+  });
+
+  $(".owl_link_btn_right").click(function () {
+    owl_link.trigger("prev.owl.carousel");
+  });
+
+  $(".owl_link_btn_left").click(function () {
+    owl_link.trigger("next.owl.carousel");
+  });
+}
 
 $(document).ready(function () {
   owl_last_news();
   owl_last_video();
   owl_cta();
+  owl_link();
+
 });

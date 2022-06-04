@@ -2,10 +2,10 @@
   background-color: $theme;
   overflow: hidden;
   padding-top: 13em;
-  padding-bottom: 13em;
+  padding-bottom: 5em;
   position: relative;
   flex-direction: column;
-    border-radius: 2em;
+    // border-radius: 2em;
   @media all and (max-width: 1041px) {
     padding-top: 6em;
     padding-bottom: 6em;

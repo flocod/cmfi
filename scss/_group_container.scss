@@ -1,142 +1,141 @@
 .group_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .struct {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    .struct {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      width: 93%;
-  
-      @media all and (max-width:425px){
-        width: 94.5%;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 93%;
+
+    @media all and (max-width: 425px) {
+      width: 94.5%;
+    }
+
+    .title_group {
+      display: block;
+      width: 100px;
+      @media all and (max-width: 700px) {
+        width: 60px;
       }
-  
-      .title_group {
+      @media all and (max-width: 515px) {
+        width: 45px;
+      }
+      @media all and (max-width: 425px) {
+        width: 32px;
+      }
+
+      .text_title {
         display: block;
-        width: 100px;
-        @media all and (max-width:700px){
-          width: 60px;
-        }
-        @media all and (max-width:515px){
-          width: 45px;
-        }
-        @media all and (max-width:425px){
-          width: 32px;
-        }
-  
-        .text_title {
+        .big_text {
           display: block;
-          .big_text {
-            display: block;
-            word-break: keep-all;
+          word-break: keep-all;
+          height: max-content;
+          text-align: right;
+
+          transform: translateY(0%) rotate(-180deg);
+          writing-mode: vertical-rl;
+          text-orientation: sideways;
+          position: relative;
+
+          font: normal normal normal 3.5em Alfa Slab One;
+          letter-spacing: 0px;
+          color: #e8e8e9;
+         
+
+          @media all and (max-width: 1299px) {
+            font: normal normal normal 3em Alfa Slab One;
+          }
+          @media all and (max-width: 1000px) {
+            color: $theme;
+          }
+          @media all and (max-width: 700px) {
+            font: normal normal normal 2.3em Alfa Slab One;
+          }
+          @media all and (max-width: 515px) {
+            font: normal normal normal 1.5em Alfa Slab One;
+          }
+          @media all and (max-width: 425px) {
+            font: normal normal normal 1.1em Alfa Slab One;
+          }
+
+          &:after {
+            content: attr(text);
+            position: absolute;
+            right: -35px;
+            bottom: 0px;
             height: max-content;
-            text-align: right;
-  
-            transform: translateY(0%) rotate(-180deg);
-            writing-mode: vertical-rl;
-            text-orientation: sideways;
-            position: relative;
-  
-            font: normal normal normal 3.5em Alfa Slab One;
+            font: normal normal normal 40px/54px Alfa Slab One;
+            @media all and (max-width: 1299px) {
+              font: normal normal normal 25px Alfa Slab One;
+              right: -25px;
+            }
             letter-spacing: 0px;
-            color: #e8e8e9;
-  
-            @media all and (max-width:1299px){
-              font: normal normal normal 3em Alfa Slab One;
+            color: $theme;
+            @media all and (max-width: 1000px) {
+              display: none;
             }
-            @media all and (max-width:700px){
-              font: normal normal normal 2.3em Alfa Slab One;
-            }
-            @media all and (max-width:515px){
-              font: normal normal normal 1.5em Alfa Slab One;
-            }
-            @media all and (max-width:425px){
-              font: normal normal normal 1.1em Alfa Slab One;
-            }
-  
-            
-            &:after {
-              content: attr(text);
-              position: absolute;
-              right: -35px;
-              bottom: 0px;
-              height: max-content;
-              font: normal normal normal 40px/54px Alfa Slab One;
-              @media all and (max-width:1299px){
-                font: normal normal normal 25px Alfa Slab One;
-                right: -25px;
-              }
-              letter-spacing: 0px;
-              color: $theme;
-              @media all and (max-width:1000px){
-               display: none;
-              }
-            }
-          }
-        }
-  
-        .controllers_box {
-          display: block;
-          margin-top: 50px;
-          @media all and (max-width:515px){
-            margin-top: 30px;
-          }
-          .btn {
-            width: 65px;
-            height: 65px;
-            background: $theme 0% 0% no-repeat padding-box;
-            border-radius: 50%;
-            color: #f7f7f7;
-            &:last-child{
-              margin-top: 10px;
-            }
-  
-            @media all and (max-width:700px){
-              width: 45px;
-              height: 45px;
-            }
-  
-            @media all and (max-width:515px){
-              width: 25px;
-              height: 25px;
-              font-size: 0.5em;
-            }
-  
-            @media all and (max-width:425px){
-              width: 23px;
-              height: 23px;
-              font-size: 0.45em;
-            }
-            
-  
           }
         }
       }
-  
-      .group_size{
-        width: calc(100% - 100px);
-        @media all and (max-width:700px){
-          width: calc(100% - 60px);
+
+      .controllers_box {
+        display: block;
+        margin-top: 50px;
+        @media all and (max-width: 515px) {
+          margin-top: 30px;
         }
-        @media all and (max-width:515px){
-          width: calc(100% - 45px);
+        .btn {
+          width: 65px;
+          height: 65px;
+          background: $theme 0% 0% no-repeat padding-box;
+          border-radius: 50%;
+          color: #f7f7f7;
+          &:last-child {
+            margin-top: 10px;
+          }
+
+          @media all and (max-width: 700px) {
+            width: 45px;
+            height: 45px;
+          }
+
+          @media all and (max-width: 515px) {
+            width: 25px;
+            height: 25px;
+            font-size: 0.5em;
+          }
+
+          @media all and (max-width: 425px) {
+            width: 23px;
+            height: 23px;
+            font-size: 0.45em;
+          }
         }
-        @media all and (max-width:425px){
-          width: calc(100% - 32px);
-        }
-        
       }
-  
+    }
+
+    .group_size {
+      width: calc(100% - 100px);
+      @media all and (max-width: 700px) {
+        width: calc(100% - 60px);
+      }
+      @media all and (max-width: 515px) {
+        width: calc(100% - 45px);
+      }
+      @media all and (max-width: 425px) {
+        width: calc(100% - 32px);
+      }
     }
   }
-  
-  .margin_group_container {
-    margin-top: 70px;
-    margin-bottom: 70px;
-    @media all and (max-width:515px){
-      margin-top: 25px;
-      margin-bottom: 25px;
-    }
+}
+
+.margin_group_container {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  @media all and (max-width: 515px) {
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
+}
