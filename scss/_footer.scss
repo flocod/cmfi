@@ -32,12 +32,12 @@
     @media all and (max-width: 1042px) {
       height: 6.3125em;
     }
-    @media all and (max-width: 700px) {
-      height: 4.3125em;
-    }
-    @media all and (max-width: 500px) {
-      height: 3em;
-    }
+    // @media all and (max-width: 700px) {
+    //   height: 4.3125em;
+    // }
+    // @media all and (max-width: 500px) {
+    //   height: 3em;
+    // }
     &:hover {
       // transform: translateY(-50%) translateX(-50%) rotate(0deg);
       transition: 0.3s;
@@ -61,12 +61,12 @@
         @media all and (max-width: 1042px) {
           font: normal normal normal 2.0625em Alfa Slab One;
         }
-        @media all and (max-width: 700px) {
-          font: normal normal normal 1.0625em Alfa Slab One;
-        }
-        @media all and (max-width: 500px) {
-          font: normal normal normal 0.7em Alfa Slab One;
-        }
+        // @media all and (max-width: 700px) {
+        //   font: normal normal normal 1.0625em Alfa Slab One;
+        // }
+        // @media all and (max-width: 500px) {
+        //   font: normal normal normal 0.7em Alfa Slab One;
+        // }
       }
 
       &__small {
@@ -82,12 +82,12 @@
         @media all and (max-width: 1042px) {
           font: normal normal 400 1em/2.5em Poppins;
         }
-        @media all and (max-width: 700px) {
-          font: normal normal normal 0.5625em Alfa Slab One;
-        }
-        @media all and (max-width: 500px) {
-          font: normal normal normal 0.3625em Alfa Slab One;
-        }
+        // @media all and (max-width: 700px) {
+        //   font: normal normal normal 0.5625em Alfa Slab One;
+        // }
+        // @media all and (max-width: 500px) {
+        //   font: normal normal normal 0.3625em Alfa Slab One;
+        // }
       }
     }
   }
@@ -96,6 +96,9 @@
     background: #fbecd7;
     color: $dark !important;
     transform: translateY(-50%) translateX(-50%) rotate(-5deg);
+    @media all and (max-width: 500px) {
+     display: none;
+    }
   }
 }
 
