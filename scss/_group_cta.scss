@@ -1,0 +1,351 @@
+.group_cta {
+  background-color: $theme;
+  overflow: hidden;
+  padding-top: 13em;
+  padding-bottom: 13em;
+  position: relative;
+  flex-direction: column;
+    border-radius: 2em;
+  @media all and (max-width: 1041px) {
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    &::after {
+      content: " ";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+
+      background: transparent linear-gradient(0deg, $theme 0%, #1d4264b5 100%)
+        0% 0% no-repeat padding-box;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__struct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    position: relative;
+    z-index: 2;
+
+    @media all and (max-width: 719px) {
+      width: 90%;
+    }
+
+    &__title {
+      display: inline-block;
+      text-align: center;
+      width: 50%;
+
+      @media all and (max-width: 1279px) {
+        width: 80%;
+      }
+      &__text1 {
+        display: inline-block;
+        text-align: center;
+        font: normal normal normal 3.4375em Alfa Slab One;
+        letter-spacing: 0px;
+        color: #ffffff;
+        text-transform: capitalize;
+        @media all and (max-width: 1497px) {
+          br {
+            display: none;
+          }
+        }
+        @media all and (max-width: 1279px) {
+          font: normal normal normal 3em Alfa Slab One;
+        }
+        @media all and (max-width: 853px) {
+          font: normal normal normal 2em Alfa Slab One;
+        }
+        @media all and (max-width: 400px) {
+            font: normal normal normal 1.5em Alfa Slab One;
+          }
+      }
+      &__text2 {
+        display: block;
+
+        font: normal normal normal 1.25em/1.625em Roboto;
+        margin-top: 1em;
+        letter-spacing: 0px;
+        color: #fafafa;
+        opacity: 0.77;
+        position: relative;
+
+        @media all and (max-width: 853px) {
+          font: normal normal normal 1em Roboto;
+        }
+        @media all and (max-width: 400px) {
+            font: normal normal 300 0.8em Roboto;
+          }
+
+        q::before,
+        q::after {
+          font-size: 1.2em;
+        }
+      }
+      &__text3 {
+        display: inline-block;
+        text-align: center;
+        font: italic normal 600 1.25em/2.5625em Poppins;
+        letter-spacing: 0px;
+        color: #fbe8d7;
+        margin-top: 1em;
+        @media all and (max-width: 400px) {
+            font: italic normal 600 1em Poppins;
+          }
+
+      }
+    }
+  }
+
+  &__boxcontain {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    @media all and (max-width: 1041px) {
+      justify-content: center;
+    }
+    &__struct {
+      display: block;
+      width: 100%;
+
+      @media all and (max-width: 1041px) {
+        width: 80%;
+      }
+      @media all and (max-width: 719px) {
+        width: 90%;
+      }
+
+      &__box {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 300px;
+        background: transparent
+          linear-gradient(123deg, #f7f7f7 0%, #f7f7f7 32%, #fbe8d7 100%) 0% 0%
+          no-repeat padding-box;
+        border-radius: 45px;
+        position: relative;
+
+        @media all and (max-width: 1279px) {
+          height: 260px;
+        }
+
+        @media all and (max-width: 1041px) {
+          width: 100%;
+          border-radius: 25px;
+        }
+
+        @media all and (max-width: 719px) {
+          height: 270px;
+        }
+
+        @media all and (max-width: 520px) {
+          height: auto;
+          padding-top: 24px;
+          padding-bottom: 24px;
+        }
+        @media all and (max-width: 400px) {
+            padding-top: 18px;
+          padding-bottom: 18px;
+          }
+
+        &__struct {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          width: 91%;
+          position: relative;
+          height: 83%;
+
+          @media all and (max-width: 1041px) {
+            width: 95%;
+          }
+          @media all and (max-width: 719px) {
+            width: 90%;
+          }
+
+          @media all and (max-width: 520px) {
+            flex-direction: column-reverse;
+            height: auto;
+          }
+
+          &__text {
+            display: block;
+            text-align: left;
+            width: 50%;
+            margin-right: 2em;
+            @media all and (max-width: 719px) {
+              width: 57%;
+            }
+            @media all and (max-width: 520px) {
+              width: 100%;
+              margin-top: 20px;
+            }
+            &__t1 {
+              font: normal normal normal 1.4em Alfa Slab One;
+              letter-spacing: 0px;
+              color: $theme;
+              text-transform: uppercase;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+
+              @media all and (max-width: 1279px) {
+                font: normal normal normal 1em Alfa Slab One;
+              }
+             
+            }
+            &__t2 {
+              font: normal normal normal 0.875em Poppins;
+              letter-spacing: 0px;
+              color: #1c1d229a;
+              margin-top: 1em;
+              margin-bottom: 1em;
+              display: -webkit-box;
+              -webkit-line-clamp: 4;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              @media all and (max-width: 400px) {
+                font: normal normal normal 0.8em Poppins;
+              }
+            }
+            &__btn {
+              font: normal normal normal 1em Alfa Slab One;
+              letter-spacing: 0px;
+              color: $theme;
+              text-transform: uppercase;
+              width: 90%;
+              height: 4.75em;
+              position: relative;
+              background: #ffffff;
+              border: 0.125em solid $theme;
+              border-radius: 1.4375em;
+              transition: 0.3s;
+              overflow: hidden;
+              @media all and (max-width: 1279px) {
+                font: normal normal normal 0.8em Alfa Slab One;
+              }
+              @media all and (max-width: 1041px) {
+                border-radius: 10px;
+              }
+              @media all and (max-width: 520px) {
+                width: 100%;
+              }
+              span {
+                position: absolute;
+
+                width: 0px;
+                height: 0px;
+                background: $dark;
+                display: block;
+                top: 150%;
+                left: 50%;
+                border-radius: 50%;
+                transform: translateY(-50%) translateY(-50%) scale(0);
+                transition: 0.5s;
+                z-index: -1;
+              }
+
+              &:hover {
+                border: 0.125em solid rgba(0, 0, 0, 0);
+                transition: 0.3s;
+                color: #fafafa;
+                span {
+                  transform: translateY(-50%) translateY(-50%) scale(5);
+                  transition: 0.5s;
+                  top: 50%;
+                  width: 200px;
+                  height: 200px;
+                  border-radius: 50%;
+                }
+              }
+            }
+          }
+
+          &__img {
+            display: block;
+            width: 47%;
+            height: 100%;
+            border-radius: 27px;
+            overflow: hidden;
+            @media all and (max-width: 1041px) {
+              width: 80%;
+              border-radius: 20px;
+            }
+            @media all and (max-width: 719px) {
+              width: 40%;
+            }
+            @media all and (max-width: 520px) {
+              width: 100%;
+              height: 230px;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cta_box_title_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @media all and (max-width: 600px) {
+      justify-content: center;
+    }
+
+    .cta_box_title {
+      display: block;
+      @media all and (max-width: 600px) {
+        display: none;
+      }
+      &__t1 {
+        font: normal normal normal 2.4375em Alfa Slab One;
+        letter-spacing: 0px;
+        color: #fbe8d7;
+        text-transform: uppercase;
+        @media all and (max-width: 853px) {
+          font: normal normal normal 1.7em Alfa Slab One;
+        }
+      }
+
+      &__t2 {
+        font: normal normal medium 1.625em/2.5625em Poppins;
+        letter-spacing: 0px;
+        color: #fbe8d7;
+      }
+    }
+  }
+}

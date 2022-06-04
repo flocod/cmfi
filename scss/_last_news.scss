@@ -5,6 +5,7 @@
   .last_news_box {
     width: 98%;
     height: 550px;
+    transition: 0.3s;
     @media all and (max-width:515px){
       height: 370px;
     }
@@ -41,6 +42,7 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          transition: 1s;
         }
       }
 
@@ -142,5 +144,14 @@
       }
 
     }
+
+
+    &:hover{
+      img{
+        transform: scale(1.3);
+        transition: 0.3s;
+      }
+    }
+
   }
 }

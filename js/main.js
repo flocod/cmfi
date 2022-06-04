@@ -58,6 +58,7 @@ $(window).on("mousemove", () => {
     });
   }
 });
+
 $(window).on("mousedown", () => {
   TweenLite.to($cursor, 0.3, {
     width: "200px",
@@ -173,18 +174,21 @@ $(".bnt_right_carous").on("click", function () {
 
 setInterval(animecarouss, 10000);
 
+let with_terminal = window.innerWidth;
+
 menu_mobil_state = 0;
 $(".btn_menu").on("click", () => {
   $(".menu_mobil").toggleClass("menu_mobil_on");
-
-  if (menu_mobil_state == 0) {
-    $(".colorful").css("display", "none");
-    $(".white").css("display", "inline-block");
-    menu_mobil_state = 1;
-  } else {
-    $(".colorful").css("display", "inline-block");
-    $(".white").css("display", "none");
-    menu_mobil_state = 0;
+  if (with_terminal > 1000) {
+    if (menu_mobil_state == 0) {
+      $(".colorful").css("display", "none");
+      $(".white").css("display", "inline-block");
+      menu_mobil_state = 1;
+    } else {
+      $(".colorful").css("display", "inline-block");
+      $(".white").css("display", "none");
+      menu_mobil_state = 0;
+    }
   }
 });
 
@@ -309,8 +313,36 @@ function owl_last_video() {
     owl_last_video.trigger("next.owl.carousel");
   });
 }
+function owl_cta() {
+  owl_cta = $(".owl_cta");
+  owl_cta.owlCarousel({
+    items: 1,
+    // loop: true,
+    center:true,
+    nav: false,
+    // autoplay: true,
+    margin: 30,
+    responsive: {
+      769: {
+        items: 1,
+      },
+      1041: {
+        items: 2,
+      },
+    },
+  });
+
+  $(".owl_cta_btn_right").click(function () {
+    owl_cta.trigger("prev.owl.carousel");
+  });
+
+  $(".owl_cta_btn_left").click(function () {
+    owl_cta.trigger("next.owl.carousel");
+  });
+}
 
 $(document).ready(function () {
   owl_last_news();
   owl_last_video();
+  owl_cta();
 });
