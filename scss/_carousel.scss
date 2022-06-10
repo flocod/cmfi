@@ -166,6 +166,8 @@
         @media all and (max-width: 617px) {
           font: normal normal normal 1em/1em Poppins;
         }
+
+     
       }
       .title {
         font: normal normal normal 2.3em/1.2em Alfa Slab One;
@@ -174,6 +176,9 @@
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
+       
+       
+
         @media all and (max-width: 1111px) {
           font: normal normal normal 2em/1.2em Alfa Slab One;
         }
@@ -186,6 +191,7 @@
         }
       }
       .description {
+       
         font: normal normal normal 0.8em Poppins;
         opacity: 0.54;
         display: -webkit-box;

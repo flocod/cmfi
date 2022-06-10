@@ -10,6 +10,9 @@
     padding-top: 6em;
     padding-bottom: 6em;
   }
+  @media all and (max-width: 400px) {
+    padding-bottom: 4em;
+  }
 
   &__img {
     width: 100%;
@@ -94,7 +97,7 @@
           font: normal normal normal 1em Roboto;
         }
         @media all and (max-width: 400px) {
-            font: normal normal 300 0.8em Roboto;
+            font: normal normal 400 0.9em Roboto;
           }
 
         q::before,
@@ -127,6 +130,10 @@
     margin-bottom: 4em;
     @media all and (max-width: 1041px) {
       justify-content: center;
+    }
+    @media all and (max-width: 400px) {
+      margin-bottom: 1em;
+      margin-top: 3em;
     }
     &__struct {
       display: block;
