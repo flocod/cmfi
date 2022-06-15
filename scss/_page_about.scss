@@ -1,0 +1,112 @@
+.group_about {
+  display: flex;
+  justify-content: space-between;
+  @media all and (max-width: 1000px) {
+    flex-direction: column;
+  }
+  &__img {
+    width: 50%;
+    @media all and (max-width: 1000px) {
+        width: 100%;
+      }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    display: block;
+    width: 45%;
+    @media all and (max-width: 1000px) {
+        width: 100%;
+        margin-top: 2em;
+      }
+    &__title {
+      display: block;
+      &__t1 {
+        display: block;
+        font: normal normal normal 2.4375em Alfa Slab One;
+        letter-spacing: 0px;
+        color: #1c1d22;
+        text-transform: capitalize;
+        @media all and (max-width: 1175px) {
+          font: normal normal normal 2em Alfa Slab One;
+        }
+        @media all and (max-width: 411px) {
+          font: normal normal normal 1.5em Alfa Slab One;
+        }
+      }
+      &__t2 {
+        font: normal normal normal 1.25em Alfa Slab One;
+        letter-spacing: 0px;
+        color: #1c1d22;
+        text-transform: uppercase;
+        opacity: 0.6;
+        @media all and (max-width: 1175px) {
+          font: normal normal normal 0.9em Alfa Slab One;
+        }
+        @media all and (max-width: 411px) {
+            font: normal normal normal .6em Alfa Slab One;
+          }
+      }
+      &__line {
+        display: block;
+        width: 12.6875em;
+        height: 0.5em;
+        background: $theme;
+        margin-top: 1em;
+        @media all and (max-width: 1175px) {
+          height: 4px;
+          width: 30%;
+          margin-top: 0.5em;
+        }
+      }
+    }
+    &__container {
+      display: block;
+      margin-top: 3em;
+      @media all and (max-width: 1175px) {
+        margin-top: 1em;
+      }
+      &__t1 {
+        font: normal normal bold 1.875em Poppins;
+        letter-spacing: 0px;
+        color: #2b2b2b;
+        text-transform: capitalize;
+        @media all and (max-width: 1175px) {
+            margin-top: 1em;
+            font: normal normal bold 1.5em Poppins;
+          }
+          @media all and (max-width: 411px) {
+            margin-top: .5em;
+            font: normal normal 600 1.2em Poppins;
+          }
+      }
+      &__t2 {
+        font: normal normal normal 1.12em Poppins;
+        letter-spacing: 0px;
+        color: #2b2b2b;
+        margin-top: 1em;
+        @media all and (max-width: 1175px) {
+            margin-top: 1em;
+            font: normal normal normal 1em Poppins;
+          }
+          @media all and (max-width: 411px) {
+            margin-top: .5em;
+            font: normal normal normal .9em Poppins;
+          }
+      }
+      &__t3 {
+        font: normal normal normal 2.575em Parisienne;
+        margin-top: .3em;
+        letter-spacing: 0px;
+        color: #000000;
+        @media all and (max-width: 1175px) {
+            margin-top: .5em;
+            font: normal normal normal 1.575em Parisienne;
+          }
+      }
+    }
+  }
+}

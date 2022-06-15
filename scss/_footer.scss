@@ -27,7 +27,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateY(-50%) translateX(-50%) rotate(5deg);
+    transform: translateY(-50%) translateX(-50%) rotate(0deg);
     transition: 0.3s;
     @media all and (max-width: 1042px) {
       height: 6.3125em;
@@ -97,7 +97,8 @@
   &__box--berge {
     background: #fbecd7;
     color: $dark !important;
-    transform: translateY(-50%) translateX(-50%) rotate(-5deg);
+    transform: translateY(50%) translateX(-50%) rotate(0deg);
+    display: none;
     @media all and (max-width: 500px) {
      display: none;
     }
@@ -486,6 +487,15 @@
 
   100% {
     transform: translateX(-43%);
+  }
+}
+@keyframes reverse-infinite-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(43%);
   }
 }
 

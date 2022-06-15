@@ -1,3 +1,4 @@
+// SCRIPT AND FUNCTION
 var $cursor = $(".cursor");
 
 function moveCursor(e) {
@@ -34,7 +35,6 @@ function movePoint(e) {
     },
   });
 }
-
 $(window).on("mousemove", movePoint);
 
 $(window).on("mousemove", () => {
@@ -75,128 +75,140 @@ $(window).on("mouseup", () => {
   });
 });
 
-// carousel
+// carousel animation
+function carous_script() {
+  // carousel
+  let carouss_img = $(".block_images .images img");
+  let carouss_images = {
+    img1: $(".img1"),
+    img2: $(".img2"),
+    img3: $(".img3"),
+    img4: $(".img4"),
+  };
 
-let carouss_img = $(".block_images .images img");
-let carouss_images = {
-  img1: $(".img1"),
-  img2: $(".img2"),
-  img3: $(".img3"),
-  img4: $(".img4"),
-};
+  let carouss_image_indice = $(".state_carous span");
+  let carouss_images_indice = {
+    indice1: $(".indice1"),
+    indice2: $(".indice2"),
+    indice3: $(".indice3"),
+    indice4: $(".indice4"),
+  };
 
-let carouss_image_indice = $(".state_carous span");
-let carouss_images_indice = {
-  indice1: $(".indice1"),
-  indice2: $(".indice2"),
-  indice3: $(".indice3"),
-  indice4: $(".indice4"),
-};
+  let statecarous = 0;
+  function animecarouss() {
+    if (statecarous == 0) {
+      carouss_img.removeClass("active");
+      carouss_images.img1.addClass("active");
+      statecarous = 1;
+      console.log(statecarous);
 
-let statecarous = 0;
-function animecarouss() {
-  if (statecarous == 0) {
-    carouss_img.removeClass("active");
-    carouss_images.img1.addClass("active");
-    statecarous = 1;
-    console.log(statecarous);
+      carouss_image_indice.removeClass("active");
+      carouss_images_indice.indice1.addClass("active");
+    } else if (statecarous == 1) {
+      carouss_img.removeClass("active");
+      carouss_images.img2.addClass("active");
+      statecarous = 2;
+      console.log(statecarous);
 
-    carouss_image_indice.removeClass("active");
-    carouss_images_indice.indice1.addClass("active");
-  } else if (statecarous == 1) {
-    carouss_img.removeClass("active");
-    carouss_images.img2.addClass("active");
-    statecarous = 2;
-    console.log(statecarous);
+      carouss_image_indice.removeClass("active");
+      carouss_images_indice.indice2.addClass("active");
+    } else if (statecarous == 2) {
+      carouss_img.removeClass("active");
+      carouss_images.img3.addClass("active");
+      statecarous = 3;
+      console.log(statecarous);
 
-    carouss_image_indice.removeClass("active");
-    carouss_images_indice.indice2.addClass("active");
-  } else if (statecarous == 2) {
-    carouss_img.removeClass("active");
-    carouss_images.img3.addClass("active");
-    statecarous = 3;
-    console.log(statecarous);
-
-    carouss_image_indice.removeClass("active");
-    carouss_images_indice.indice3.addClass("active");
-  } else if (statecarous == 3) {
-    carouss_img.removeClass("active");
-    carouss_images.img4.addClass("active");
-    statecarous = 0;
-    console.log(statecarous);
-
-    carouss_image_indice.removeClass("active");
-    carouss_images_indice.indice4.addClass("active");
-  }
-}
-
-function animecarouss_left() {
-  switch (statecarous) {
-    case 1:
-      statecarous = 4 - 1;
-      animecarouss();
-
-      break;
-    case 2:
-      statecarous = 1 - 1;
-      animecarouss();
-
-      break;
-    case 3:
-      statecarous = 2 - 1;
-      animecarouss();
-
-      break;
-    case 4:
-      statecarous = 3 - 1;
-      animecarouss();
-
-      break;
-    case 0:
-      statecarous = 4;
-      animecarouss();
-
-      break;
-
-    default:
+      carouss_image_indice.removeClass("active");
+      carouss_images_indice.indice3.addClass("active");
+    } else if (statecarous == 3) {
+      carouss_img.removeClass("active");
+      carouss_images.img4.addClass("active");
       statecarous = 0;
-      animecarouss();
-      break;
+      console.log(statecarous);
+
+      carouss_image_indice.removeClass("active");
+      carouss_images_indice.indice4.addClass("active");
+    }
   }
+
+  function animecarouss_left() {
+    switch (statecarous) {
+      case 1:
+        statecarous = 4 - 1;
+        animecarouss();
+
+        break;
+      case 2:
+        statecarous = 1 - 1;
+        animecarouss();
+
+        break;
+      case 3:
+        statecarous = 2 - 1;
+        animecarouss();
+
+        break;
+      case 4:
+        statecarous = 3 - 1;
+        animecarouss();
+
+        break;
+      case 0:
+        statecarous = 4;
+        animecarouss();
+
+        break;
+
+      default:
+        statecarous = 0;
+        animecarouss();
+        break;
+    }
+  }
+
+  $(".bnt_left_carous").on("click", function () {
+    animecarouss_left();
+  });
+  $(".bnt_right_carous").on("click", function () {
+    animecarouss();
+  });
+  setInterval(animecarouss, 10000);
 }
 
-$(".bnt_left_carous").on("click", function () {
-  animecarouss_left();
-});
-$(".bnt_right_carous").on("click", function () {
-  animecarouss();
-});
-
-setInterval(animecarouss, 10000);
-
-let with_terminal = window.innerWidth;
-
+let with_terminal = window.innerWidth; // largeur du terminal
 menu_mobil_state = 0;
-$(".btn_menu").on("click", () => {
+$("body").on("click", ".btn_menu", () => {
   $(".menu_mobil").toggleClass("menu_mobil_on");
   if (with_terminal > 1000) {
-    if (menu_mobil_state == 0) {
-      $(".colorful").css("display", "none");
-      $(".white").css("display", "inline-block");
-      menu_mobil_state = 1;
-    } else {
-      $(".colorful").css("display", "inline-block");
-      $(".white").css("display", "none");
-      menu_mobil_state = 0;
+    let actual_page=$('body').attr('page');
+    if(actual_page="no-home"){
+      if (menu_mobil_state == 0) {
+        $(".colorful").css("display", "none");
+        $(".white").css("display", "inline-block");
+        menu_mobil_state = 1;
+      } else {
+        $(".colorful").css("display", "none");
+        $(".white").css("display", "inline-block");
+        menu_mobil_state = 0;
+      }
+    }else{
+      if (menu_mobil_state == 0) {
+        $(".colorful").css("display", "none");
+        $(".white").css("display", "inline-block");
+        menu_mobil_state = 1;
+      } else {
+        $(".colorful").css("display", "inline-block");
+        $(".white").css("display", "none");
+        menu_mobil_state = 0;
+      }
     }
   }
 });
 
 // menu mobile animation images
-
 CURRENT_LAYER = "image_layer1";
 $(document).ready(function () {
-  $(".menu_navigation .item_nav").on("mouseenter", function () {
+  $("body").on("mouseenter", ".menu_navigation .item_nav", function () {
     let num = $(this).attr("number");
 
     switch (num) {
@@ -228,36 +240,37 @@ $(document).ready(function () {
     // $('.image_layer').addClass('image_layer_active');
   });
 
-  $(".menu_navigation .item_nav").on("mouseleave", function () {
+  $("body").on("mouseleave", ".menu_navigation .item_nav", function () {
     $(".image_layer").removeClass("image_layer_active");
   });
 });
 
-let progress_state;
-$(document).ready(function () {
-  totalheight = document.body.scrollHeight - window.innerHeight;
-  window.onscroll = function () {
-    progress = (window.pageYOffset / totalheight) * 100;
-    progress = Math.round(Number(progress));
-    progress = progress + "%";
-    header = $(".header .img");
+function progress_doc() {
+  let progress_state;
+  $(document).ready(function () {
+    totalheight = document.body.scrollHeight - window.innerHeight;
+    window.onscroll = function () {
+      progress = (window.pageYOffset / totalheight) * 100;
+      progress = Math.round(Number(progress));
+      progress = progress + "%";
+      header = $(".header .img");
 
-    if (progress_state < progress) {
-      $(".header .img").addClass("off");
+      if (progress_state < progress) {
+        $(".header .img").addClass("off");
 
-      console.log("scroll to bottom");
-    } else if (window.pageYOffset == 0) {
-      $(".header .img").removeClass("off");
-      if (window.innerWidth > 1000) {
-        $(".scroll_indice").css("display", "flex");
+        console.log("scroll to bottom");
+      } else if (window.pageYOffset == 0) {
+        $(".header .img").removeClass("off");
+        if (window.innerWidth > 1000) {
+          $(".scroll_indice").css("display", "flex");
+        }
       }
-    }
 
-    progress_state = progress;
-  };
-});
-
-function owl_last_news() {
+      progress_state = progress;
+    };
+  });
+}
+function fn_owl_last_news() {
   owl_last_news = $(".owl_last_news");
   owl_last_news.owlCarousel({
     items: 1,
@@ -278,16 +291,17 @@ function owl_last_news() {
     },
   });
 
-  $(".owl_last_news_btn_right").click(function () {
-    owl_last_news.trigger("prev.owl.carousel");
-  });
 
-  $(".owl_last_news_btn_left").click(function () {
-    owl_last_news.trigger("next.owl.carousel");
-  });
 }
+$("body").on("click", ".owl_last_news_btn_right", function () {
+  owl_last_news.trigger("prev.owl.carousel");
+});
 
-function owl_last_video() {
+$("body").on("click", ".owl_last_news_btn_left", function () {
+  owl_last_news.trigger("next.owl.carousel");
+});
+
+function fn_owl_last_video() {
   owl_last_video = $(".owl_last_video");
   owl_last_video.owlCarousel({
     items: 1,
@@ -305,20 +319,22 @@ function owl_last_video() {
     },
   });
 
-  $(".owl_last_video_btn_right").click(function () {
-    owl_last_video.trigger("prev.owl.carousel");
-  });
-
-  $(".owl_last_video_btn_left").click(function () {
-    owl_last_video.trigger("next.owl.carousel");
-  });
+  
 }
-function owl_cta() {
+$("body").on("click", ".owl_last_video_btn_right", function () {
+  owl_last_video.trigger("prev.owl.carousel");
+});
+
+$("body").on("click", ".owl_last_video_btn_left", function () {
+  owl_last_video.trigger("next.owl.carousel");
+});
+
+function fn_owl_cta() {
   owl_cta = $(".owl_cta");
   owl_cta.owlCarousel({
     items: 1,
     // loop: true,
-    center:true,
+    center: true,
     nav: false,
     // autoplay: true,
     margin: 30,
@@ -332,20 +348,22 @@ function owl_cta() {
     },
   });
 
-  $(".owl_cta_btn_right").click(function () {
-    owl_cta.trigger("prev.owl.carousel");
-  });
-
-  $(".owl_cta_btn_left").click(function () {
-    owl_cta.trigger("next.owl.carousel");
-  });
+ 
 }
-function owl_link() {
+$("body").on("click", ".owl_cta_btn_right", function () {
+  owl_cta.trigger("prev.owl.carousel");
+});
+
+$("body").on("click", ".owl_cta_btn_left", function () {
+  owl_cta.trigger("next.owl.carousel");
+});
+
+function fn_owl_link() {
   owl_link = $(".owl_link");
   owl_link.owlCarousel({
     items: 1,
     loop: true,
-    center:false,
+    center: false,
     nav: false,
     autoplay: true,
     margin: 20,
@@ -356,7 +374,6 @@ function owl_link() {
       },
       361: {
         items: 2,
-       
       },
       1083: {
         items: 3,
@@ -364,24 +381,72 @@ function owl_link() {
       },
       1400: {
         items: 4,
-       
       },
     },
   });
 
-  $(".owl_link_btn_right").click(function () {
-    owl_link.trigger("prev.owl.carousel");
+  
+}
+$("body").on("click", ".owl_link_btn_right", function () {
+  owl_link.trigger("prev.owl.carousel");
+});
+
+$("body").on("click", ".owl_link_btn_left", function () {
+  owl_link.trigger("next.owl.carousel");
+});
+//END SCRIPT AND FUNTION
+
+// ~load file assets
+function load_module(elt, elt_location, call_action) {
+  $(elt).load(elt_location, call_action);
+}
+
+function loadAll() {
+  $("#HEADER").load("assets/header.html", () => {
+    progress_doc();
+  });
+  $("#CAROUSEL").load("assets/carousel.html", () => {
+    progress_doc();
+    carous_script();
+  });
+  $("#LAST_NEWS").load("assets/last_news.html", () => {
+   
+    fn_owl_last_news();
+  });
+  $("#LAST_VIDEOS").load("assets/last_videos.html", () => {
+   
+    fn_owl_last_video();
+  });
+  $("#CTA").load("assets/cta.html", () => {
+    
+    fn_owl_cta();
   });
 
-  $(".owl_link_btn_left").click(function () {
-    owl_link.trigger("next.owl.carousel");
+  $("#LINK").load("assets/link.html", () => {
+    
+    fn_owl_link();
   });
+  $("#FOOTER").load("assets/footer.html", () => {});
 }
 
 $(document).ready(function () {
-  owl_last_news();
-  owl_last_video();
-  owl_cta();
-  owl_link();
+  window.onload = function () {
+    loadAll();
+  };
+});
+
+var content_site = "";
+
+$("body").on("click", ".home", async () => {
+
+  $('#LOAD_CONTAINER').load("assets/index.html",function(){
+    loadAll();
+  });
 
 });
+
+$("body").on("click", ".NOHOME", () => {
+ $("body").attr("page","no-home");
+});
+
+
