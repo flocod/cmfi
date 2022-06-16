@@ -7,8 +7,8 @@
   &__img {
     width: 50%;
     @media all and (max-width: 1000px) {
-        width: 100%;
-      }
+      width: 100%;
+    }
     img {
       display: block;
       width: 100%;
@@ -19,9 +19,9 @@
     display: block;
     width: 45%;
     @media all and (max-width: 1000px) {
-        width: 100%;
-        margin-top: 2em;
-      }
+      width: 100%;
+      margin-top: 2em;
+    }
     &__title {
       display: block;
       &__t1 {
@@ -47,8 +47,8 @@
           font: normal normal normal 0.9em Alfa Slab One;
         }
         @media all and (max-width: 411px) {
-            font: normal normal normal .6em Alfa Slab One;
-          }
+          font: normal normal normal 0.6em Alfa Slab One;
+        }
       }
       &__line {
         display: block;
@@ -74,39 +74,61 @@
         letter-spacing: 0px;
         color: #2b2b2b;
         text-transform: capitalize;
+        opacity: 0.9;
         @media all and (max-width: 1175px) {
-            margin-top: 1em;
-            font: normal normal bold 1.5em Poppins;
-          }
-          @media all and (max-width: 411px) {
-            margin-top: .5em;
-            font: normal normal 600 1.2em Poppins;
-          }
+          margin-top: 1em;
+          font: normal normal bold 1.5em Poppins;
+        }
+        @media all and (max-width: 411px) {
+          margin-top: 0.5em;
+          font: normal normal 600 1.2em Poppins;
+        }
       }
+
       &__t2 {
         font: normal normal normal 1.12em Poppins;
         letter-spacing: 0px;
         color: #2b2b2b;
         margin-top: 1em;
+        opacity: 0.6;
+        display: -webkit-box;
         @media all and (max-width: 1175px) {
-            margin-top: 1em;
-            font: normal normal normal 1em Poppins;
-          }
-          @media all and (max-width: 411px) {
-            margin-top: .5em;
-            font: normal normal normal .9em Poppins;
-          }
+          margin-top: 1em;
+          font: normal normal normal 1em Poppins;
+        }
+        @media all and (max-width: 411px) {
+          margin-top: 0.5em;
+          font: normal normal normal 0.9em Poppins;
+        }
       }
+
+      .cut_text{
+        -webkit-line-clamp: 9;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        display: -webkit-box;
+        @media all and (max-width: 411px) {
+            -webkit-line-clamp: 4;
+        }
+      }
+
       &__t3 {
         font: normal normal normal 2.575em Parisienne;
-        margin-top: .3em;
+        margin-top: 0.3em;
         letter-spacing: 0px;
         color: #000000;
         @media all and (max-width: 1175px) {
-            margin-top: .5em;
-            font: normal normal normal 1.575em Parisienne;
-          }
+          margin-top: 0.5em;
+          font: normal normal normal 1.575em Parisienne;
+        }
       }
     }
   }
+}
+
+
+.group_about--reverse {
+    @media all and (max-width: 1000px) {
+        flex-direction: column-reverse;
+      }
 }

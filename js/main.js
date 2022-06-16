@@ -181,7 +181,7 @@ $("body").on("click", ".btn_menu", () => {
   $(".menu_mobil").toggleClass("menu_mobil_on");
   if (with_terminal > 1000) {
     let actual_page=$('body').attr('page');
-    if(actual_page="no-home"){
+    if(actual_page=="no-home"){
       if (menu_mobil_state == 0) {
         $(".colorful").css("display", "none");
         $(".white").css("display", "inline-block");
@@ -203,6 +203,10 @@ $("body").on("click", ".btn_menu", () => {
       }
     }
   }
+});
+
+$("body").on("click", ".item_nav", () => {
+  $(".menu_mobil").toggleClass("menu_mobil_on");
 });
 
 // menu mobile animation images
@@ -423,7 +427,6 @@ function loadAll() {
   });
 
   $("#LINK").load("assets/link.html", () => {
-    
     fn_owl_link();
   });
   $("#FOOTER").load("assets/footer.html", () => {});
@@ -442,11 +445,45 @@ $("body").on("click", ".home", async () => {
   $('#LOAD_CONTAINER').load("assets/index.html",function(){
     loadAll();
   });
+  $("body").attr("page","home");
+});
+
+
+$("body").on("click", ".about", async () => {
+  $('#LOAD_CONTAINER').load("assets/about.html",function(){
+    $("#CTA").load("assets/cta.html", () => {
+      fn_owl_cta();
+    });
+  
+    $("#LINK").load("assets/link.html", () => {
+      fn_owl_link();
+    });
+  });
 
 });
 
 $("body").on("click", ".NOHOME", () => {
  $("body").attr("page","no-home");
+
 });
 
 
+
+$(document).ready(function () {
+  
+  $('body').on('click','.btn_text', function(){
+    state= $(this).attr('state');
+    target= $(this).attr('target');
+    if(state=="short"){
+      $(target).removeClass('cut_text');
+      $(this).attr('state','full');
+      $(this).text('Reduire')
+    }else{
+      $(target).addClass('cut_text');
+      $(this).attr('state','short');
+ 
+      $(this).text('Lire plus  →')
+    }
+  })
+
+});

@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Righteous&display=swap");
-/**
-Thin 100
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+/**Thin 100
 Extra-light 200
 Light 300
 Regular 400
@@ -11,8 +11,7 @@ Medium 500
 Semi-bold 600
 Bold 700
 Extra-bold 800
-Black 900
-**/
+Black 900**/
 .body {
   margin: 0 auto;
   padding: 0 auto;
@@ -340,6 +339,20 @@ a :hover {
   to {
     -webkit-transform: translate3d(-7rem, 0, 0);
             transform: translate3d(-7rem, 0, 0);
+  }
+}
+
+.btn_text {
+  display: block;
+  font-size: 1.3em;
+  color: #0154a1;
+  margin-top: 0.6em;
+}
+
+@media all and (max-width: 411px) {
+  .btn_text {
+    margin-top: 0.9em;
+    font-size: 0.9em;
   }
 }
 
@@ -3649,7 +3662,7 @@ a :hover {
 
 @media all and (max-width: 411px) {
   .group_about__text__title__t2 {
-    font: normal normal normal .6em Alfa Slab One;
+    font: normal normal normal 0.6em Alfa Slab One;
   }
 }
 
@@ -3685,6 +3698,7 @@ a :hover {
   letter-spacing: 0px;
   color: #2b2b2b;
   text-transform: capitalize;
+  opacity: 0.9;
 }
 
 @media all and (max-width: 1175px) {
@@ -3696,7 +3710,7 @@ a :hover {
 
 @media all and (max-width: 411px) {
   .group_about__text__container__t1 {
-    margin-top: .5em;
+    margin-top: 0.5em;
     font: normal normal 600 1.2em Poppins;
   }
 }
@@ -3706,6 +3720,8 @@ a :hover {
   letter-spacing: 0px;
   color: #2b2b2b;
   margin-top: 1em;
+  opacity: 0.6;
+  display: -webkit-box;
 }
 
 @media all and (max-width: 1175px) {
@@ -3717,21 +3733,43 @@ a :hover {
 
 @media all and (max-width: 411px) {
   .group_about__text__container__t2 {
-    margin-top: .5em;
-    font: normal normal normal .9em Poppins;
+    margin-top: 0.5em;
+    font: normal normal normal 0.9em Poppins;
+  }
+}
+
+.group_about__text__container .cut_text {
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
+
+@media all and (max-width: 411px) {
+  .group_about__text__container .cut_text {
+    -webkit-line-clamp: 4;
   }
 }
 
 .group_about__text__container__t3 {
   font: normal normal normal 2.575em Parisienne;
-  margin-top: .3em;
+  margin-top: 0.3em;
   letter-spacing: 0px;
   color: #000000;
 }
 
 @media all and (max-width: 1175px) {
   .group_about__text__container__t3 {
-    margin-top: .5em;
+    margin-top: 0.5em;
     font: normal normal normal 1.575em Parisienne;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .group_about--reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
