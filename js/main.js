@@ -429,14 +429,14 @@ function loadAll() {
   $("#LINK").load("assets/link.html", () => {
     fn_owl_link();
   });
+//modification de la fontion onload
+
   $("#FOOTER").load("assets/footer.html", () => {});
 }
 
-$(document).ready(function () {
-  window.onload = function () {
-    loadAll();
-  };
-});
+window.onload = function () {
+  loadAll();
+};
 
 var content_site = "";
 
