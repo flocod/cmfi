@@ -202,6 +202,11 @@
       .btn_read {
         display: block;
         margin-top: 30px;
+
+        @media all and (max-width: 1000px) {
+         margin-bottom: 8.5em;
+        }
+
         .text {
           font: normal normal 500 1.1em Poppins;
         }
@@ -358,7 +363,7 @@
     z-index: 11;
     // border-radius: 10px 10px 0px 0px;
     @media all and (max-width: 1000px) {
-      display: none;
+      width: 100%;
     }
     .radio {
       border: 0px;
@@ -369,9 +374,9 @@
     }
   }
 
-  @media all and (min-width: 1024px) and (max-height: 714px) {
-    .radio_box {
-      display: none;
-    }
-  }
+  // @media all and (min-width: 1024px) and (max-height: 714px) {
+  //   .radio_box {
+  //     display: none;
+  //   }
+  // }
 }
