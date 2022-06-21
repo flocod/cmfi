@@ -2,6 +2,9 @@
   margin-top: 0em;
   margin-bottom: 1.5em;
   position: relative;
+  @media all and (max-width: 425px) {
+    margin-bottom: .9em;
+  }
   &::after {
     position: absolute;
     top: 0px;
@@ -14,6 +17,10 @@
     content: "";
     @media all and (max-width: 511px) {
       transform: translateY(-31%);
+    }
+    @media all and (max-width: 425px) {
+       
+      transform: translateY(-25%);
     }
   }
 }
@@ -45,6 +52,12 @@
     @media all and (max-width: 511px) {
       border-radius: 14px;
     }
+    @media all and (max-width: 425px) {
+      border: 1.5px solid #1c1d22;
+      height: 50px;
+      font-size: 14px;
+      border-radius: 10px;
+    }
     input {
       display: block;
       background: none;
@@ -63,6 +76,11 @@
       @media all and (max-width: 511px) {
         width: 60%;
       }
+      @media all and (max-width: 425px) {
+       
+        width: 65%;
+        padding-left: 13px;
+      }
 
     }
 
@@ -80,6 +98,13 @@
         width: 40%;
         font-size: 1em;
       }
+
+      @media all and (max-width: 425px) {
+        border-radius: 8px;
+        font-size: 13px;
+        width: 35%;
+      }
+
     }
   }
 
