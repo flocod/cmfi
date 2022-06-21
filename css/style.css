@@ -3772,6 +3772,9 @@ a :hover {
   .off_aside_1000px .struct .title_group {
     display: none;
   }
+  .off_aside_1000px .struct .group_size {
+    width: 100%;
+  }
 }
 
 .tools_news_block {
