@@ -132,3 +132,19 @@
         flex-direction: column-reverse;
       }
 }
+
+.off_aside_1000px{
+
+  @media all and (max-width:1000px) {
+    
+    .struct{
+      .title_group{
+        display: none;
+      }
+    }
+
+
+  }
+
+
+}

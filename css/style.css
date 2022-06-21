@@ -3768,6 +3768,12 @@ a :hover {
   }
 }
 
+@media all and (max-width: 1000px) {
+  .off_aside_1000px .struct .title_group {
+    display: none;
+  }
+}
+
 .tools_news_block {
   margin-top: 0em;
   margin-bottom: 1.5em;
