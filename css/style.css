@@ -3780,7 +3780,7 @@ a :hover {
   position: relative;
 }
 
-@media all and (max-width: 425px) {
+@media all and (max-width: 500px) {
   .tools_news_block {
     margin-bottom: .9em;
   }
@@ -3806,7 +3806,7 @@ a :hover {
   }
 }
 
-@media all and (max-width: 425px) {
+@media all and (max-width: 500px) {
   .tools_news_block::after {
     -webkit-transform: translateY(-25%);
             transform: translateY(-25%);
@@ -3865,7 +3865,7 @@ a :hover {
   }
 }
 
-@media all and (max-width: 425px) {
+@media all and (max-width: 500px) {
   .tools_news__form {
     border: 1.5px solid #1c1d22;
     height: 50px;
@@ -3908,7 +3908,7 @@ a :hover {
   }
 }
 
-@media all and (max-width: 425px) {
+@media all and (max-width: 500px) {
   .tools_news__form input {
     width: 65%;
     padding-left: 13px;
@@ -3933,7 +3933,7 @@ a :hover {
   }
 }
 
-@media all and (max-width: 425px) {
+@media all and (max-width: 500px) {
   .tools_news__form .bnt {
     border-radius: 8px;
     font-size: 13px;

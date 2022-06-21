@@ -2,7 +2,7 @@
   margin-top: 0em;
   margin-bottom: 1.5em;
   position: relative;
-  @media all and (max-width: 425px) {
+  @media all and (max-width: 500px) {
     margin-bottom: .9em;
   }
   &::after {
@@ -18,7 +18,7 @@
     @media all and (max-width: 511px) {
       transform: translateY(-31%);
     }
-    @media all and (max-width: 425px) {
+    @media all and (max-width: 500px) {
        
       transform: translateY(-25%);
     }
@@ -52,7 +52,7 @@
     @media all and (max-width: 511px) {
       border-radius: 14px;
     }
-    @media all and (max-width: 425px) {
+    @media all and (max-width: 500px) {
       border: 1.5px solid #1c1d22;
       height: 50px;
       font-size: 14px;
@@ -76,7 +76,7 @@
       @media all and (max-width: 511px) {
         width: 60%;
       }
-      @media all and (max-width: 425px) {
+      @media all and (max-width: 500px) {
        
         width: 65%;
         padding-left: 13px;
@@ -99,7 +99,7 @@
         font-size: 1em;
       }
 
-      @media all and (max-width: 425px) {
+      @media all and (max-width: 500px) {
         border-radius: 8px;
         font-size: 13px;
         width: 35%;
