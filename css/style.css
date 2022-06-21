@@ -3808,6 +3808,7 @@ a :hover {
 
 @media all and (max-width: 500px) {
   .tools_news_block::after {
+    border-radius: 15px 15px 0px 0px;
     -webkit-transform: translateY(-25%);
             transform: translateY(-25%);
   }
