@@ -180,8 +180,8 @@ menu_mobil_state = 0;
 $("body").on("click", ".btn_menu", () => {
   $(".menu_mobil").toggleClass("menu_mobil_on");
   if (with_terminal > 1000) {
-    let actual_page=$('body').attr('page');
-    if(actual_page=="no-home"){
+    let actual_page = $("body").attr("page");
+    if (actual_page == "no-home") {
       if (menu_mobil_state == 0) {
         $(".colorful").css("display", "none");
         $(".white").css("display", "inline-block");
@@ -191,7 +191,7 @@ $("body").on("click", ".btn_menu", () => {
         $(".white").css("display", "inline-block");
         menu_mobil_state = 0;
       }
-    }else{
+    } else {
       if (menu_mobil_state == 0) {
         $(".colorful").css("display", "none");
         $(".white").css("display", "inline-block");
@@ -294,8 +294,6 @@ function fn_owl_last_news() {
       },
     },
   });
-
-
 }
 $("body").on("click", ".owl_last_news_btn_right", function () {
   owl_last_news.trigger("prev.owl.carousel");
@@ -322,8 +320,6 @@ function fn_owl_last_video() {
       },
     },
   });
-
-  
 }
 $("body").on("click", ".owl_last_video_btn_right", function () {
   owl_last_video.trigger("prev.owl.carousel");
@@ -351,8 +347,6 @@ function fn_owl_cta() {
       },
     },
   });
-
- 
 }
 $("body").on("click", ".owl_cta_btn_right", function () {
   owl_cta.trigger("prev.owl.carousel");
@@ -388,8 +382,6 @@ function fn_owl_link() {
       },
     },
   });
-
-  
 }
 $("body").on("click", ".owl_link_btn_right", function () {
   owl_link.trigger("prev.owl.carousel");
@@ -398,6 +390,37 @@ $("body").on("click", ".owl_link_btn_right", function () {
 $("body").on("click", ".owl_link_btn_left", function () {
   owl_link.trigger("next.owl.carousel");
 });
+
+
+
+
+function fn_owl_tags() {
+  owl_tags = $(".owl_tags");
+  owl_tags.owlCarousel({
+    items: 1,
+    loop: true,
+    nav: false,
+    // autoplay: true,
+    margin: 5,
+    responsive: {
+      400: {
+        items: 2,
+      },
+    
+      1400: {
+        items: 3,
+      },
+    },
+  });
+}
+
+
+$("body").on("click", ".owl_tags_btn_right", function () {
+  owl_tags.trigger("next.owl.carousel");
+});
+
+
+
 //END SCRIPT AND FUNTION
 
 // ~load file assets
@@ -414,22 +437,19 @@ function loadAll() {
     carous_script();
   });
   $("#LAST_NEWS").load("assets/last_news.html", () => {
-   
     fn_owl_last_news();
   });
   $("#LAST_VIDEOS").load("assets/last_videos.html", () => {
-   
     fn_owl_last_video();
   });
   $("#CTA").load("assets/cta.html", () => {
-    
     fn_owl_cta();
   });
 
   $("#LINK").load("assets/link.html", () => {
     fn_owl_link();
   });
-//modification de la fontion onload
+  //modification de la fontion onload
 
   $("#FOOTER").load("assets/footer.html", () => {});
 }
@@ -441,49 +461,55 @@ window.onload = function () {
 var content_site = "";
 
 $("body").on("click", ".home", async () => {
-
-  $('#LOAD_CONTAINER').load("assets/index.html",function(){
+  $("#LOAD_CONTAINER").load("assets/index.html", function () {
     loadAll();
   });
-  $("body").attr("page","home");
+  $("body").attr("page", "home");
 });
 
-
 $("body").on("click", ".about", async () => {
-  $('#LOAD_CONTAINER').load("assets/about.html",function(){
+  $("#LOAD_CONTAINER").load("assets/about.html", function () {
     $("#CTA").load("assets/cta.html", () => {
       fn_owl_cta();
     });
-  
+
     $("#LINK").load("assets/link.html", () => {
       fn_owl_link();
     });
   });
+});
 
+
+$("body").on("click", ".news", async () => {
+  $("#LOAD_CONTAINER").load("assets/news.html", function () {
+    fn_owl_tags();
+    $("#CTA").load("assets/cta.html", () => {
+      fn_owl_cta();
+    });
+
+    $("#LINK").load("assets/link.html", () => {
+      fn_owl_link();
+    });
+  });
 });
 
 $("body").on("click", ".NOHOME", () => {
- $("body").attr("page","no-home");
-
+  $("body").attr("page", "no-home");
 });
 
-
-
 $(document).ready(function () {
-  
-  $('body').on('click','.btn_text', function(){
-    state= $(this).attr('state');
-    target= $(this).attr('target');
-    if(state=="short"){
-      $(target).removeClass('cut_text');
-      $(this).attr('state','full');
-      $(this).text('Reduire')
-    }else{
-      $(target).addClass('cut_text');
-      $(this).attr('state','short');
- 
-      $(this).text('Lire plus  →')
-    }
-  })
+  $("body").on("click", ".btn_text", function () {
+    state = $(this).attr("state");
+    target = $(this).attr("target");
+    if (state == "short") {
+      $(target).removeClass("cut_text");
+      $(this).attr("state", "full");
+      $(this).text("Reduire");
+    } else {
+      $(target).addClass("cut_text");
+      $(this).attr("state", "short");
 
+      $(this).text("Lire plus  →");
+    }
+  });
 });

@@ -1,0 +1,26 @@
+.news_list{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px !important;
+    &__struct{
+        width: 93%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+        .last_news_box{
+           
+            width: 32.5%;
+            margin-bottom: 1em;
+            @media all and (max-width: 1200px) {
+                width: 49.3%;
+              }
+            @media all and (max-width: 700px) {
+                width: 100%;
+              }
+        }
+    }
+    
+}

@@ -212,11 +212,11 @@ a {
   pointer-events: none;
   animation: noise 1s steps(2) infinite;
 }
-.noise {
-  @media all and (max-width: 700px) {
-    display: none !important;
-  }
-}
+// .noise {
+//   @media all and (max-width: 700px) {
+//     display: none !important;
+//   }
+// }
 
 @keyframes noise {
   0% {
