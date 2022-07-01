@@ -414,12 +414,23 @@ function fn_owl_tags() {
   });
 }
 
-
 $("body").on("click", ".owl_tags_btn_right", function () {
   owl_tags.trigger("next.owl.carousel");
 });
 
 
+function fn_owl_blog_images() {
+  owl_blog_images = $(".owl_blog_images");
+  owl_blog_images.owlCarousel({
+    items: 1,
+    loop: true,
+    nav: true,
+    autoplay: true,
+    margin: 0,
+  
+  });
+}
+fn_owl_blog_images();
 
 //END SCRIPT AND FUNTION
 
@@ -480,6 +491,9 @@ $("body").on("click", ".about", async () => {
 });
 
 
+
+
+
 $("body").on("click", ".news", async () => {
   $("#LOAD_CONTAINER").load("assets/news.html", function () {
     fn_owl_tags();
@@ -492,6 +506,25 @@ $("body").on("click", ".news", async () => {
     });
   });
 });
+
+
+$("body").on("click", ".read", async () => {
+  $(".colorful").css("display", "none");
+  $(".white").css("display", "inline-block");
+  menu_mobil_state = 1;
+  $("#LOAD_CONTAINER").load("assets/read.html", function () {
+    fn_owl_blog_images();
+
+    $("#LAST_NEWS").load("assets/last_news.html", () => {
+      fn_owl_last_news();
+    });
+
+    $("#LINK").load("assets/link.html", () => {
+      fn_owl_link();
+    });
+  });
+});
+
 
 $("body").on("click", ".NOHOME", () => {
   $("body").attr("page", "no-home");
