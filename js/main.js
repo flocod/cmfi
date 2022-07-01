@@ -546,3 +546,47 @@ $(document).ready(function () {
     }
   });
 });
+
+
+////// LISTEN NEWS
+
+listen=1;
+listen_pause=false;
+$(document).ready(function () {
+  
+  $("body").on("click", "#player",function(){
+
+    console.log("click");
+  
+
+
+    if(listen){
+      let texte_voice= $(".blog__flex__container__body__struct__title").text() +  $(".blog__flex__container__body__struct__container ").text();
+         responsiveVoice.speak(texte_voice,"French Female");
+      listen=0;
+      console.log("play");
+    }else{
+      listen=1;
+      responsiveVoice.cancel();
+      console.log("stop");
+      texte_voice="";
+    }
+
+    // if(responsiveVoice.isPlaying()){
+    //   responsiveVoice.pause();
+    // }else{
+    //   responsiveVoice.resume();     
+    // }
+    
+  });
+
+
+  // $("#stop_player").on('click',function(){
+
+  //   $("#player").addClass("play_listen");
+  //   responsiveVoice.cancel();
+  //   listen=1;
+
+  // });
+
+});
