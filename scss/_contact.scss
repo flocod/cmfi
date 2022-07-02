@@ -1,0 +1,286 @@
+.contact_raduis_block {
+  margin-top: 0em;
+  margin-bottom: 1.5em;
+  position: relative;
+  @media all and (max-width: 500px) {
+    margin-bottom: 0.9em;
+  }
+  &::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 4em;
+    background: #f7f7f7;
+    transform: translateY(-50%);
+    border-radius: 20px 20px 0px 0px;
+    content: "";
+    @media all and (max-width: 511px) {
+      transform: translateY(-31%);
+    }
+    @media all and (max-width: 500px) {
+      border-radius: 15px 15px 0px 0px;
+      transform: translateY(-25%);
+    }
+  }
+}
+
+.contact_block {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  &__struct {
+    width: 95%;
+    display: block;
+
+    background: #ffffff 0% 0% no-repeat padding-box;
+    // box-shadow: 0px 3px 6px #00000029;
+    border-radius: 20px;
+
+    &__flex {
+      display: flex;
+      justify-content: space-between;
+      @media all and (max-width:1000px){
+       flex-wrap: wrap;
+    }
+      &__info {
+        width: 35%;
+        @media all and (max-width:1202px){
+            width: 47%;
+        }
+        @media all and (max-width:1000px){
+            width:100%;
+        }
+        background: $theme 0% 0% no-repeat padding-box;
+        // box-shadow: 0px 3px 6px #00000029;
+        border-radius: 15px;
+
+        &__struct {
+          display: block;
+          width: 90%;
+          // border: 1px solid white;
+          margin-top: 2em;
+          margin-bottom: 2em;
+          @media all and (max-width:1000px){
+            margin-bottom: 0em;
+          }
+          .title {
+            font: normal normal bold 1.5em Poppins;
+            letter-spacing: 0px;
+            color: #fafafa;
+            text-transform: capitalize;
+          }
+
+          .title_desc {
+            font: normal normal normal 1.25em Poppins;
+            letter-spacing: 0px;
+            color: #fafafa;
+            opacity: 0.74;
+            margin-top: 10px;
+            @media all and (max-width:1000px){
+                font-size: 1em;
+              
+              }
+          }
+
+          .contact_contain {
+            width: 100%;
+            margin-top: 3.5em;
+            @media all and (max-width:1000px){
+                margin-top: 2em;
+              
+              }
+            .contact_item {
+              display: flex;
+              justify-content: left;
+
+              width: 100%;
+              margin-bottom: 1.6em;
+              @media all and (max-width:1000px){
+                margin-bottom: 1.2em;
+                align-items: flex-start;
+              
+              }
+
+              .ic {
+                display: inline-block;
+                margin-right: 14px;
+                color: #fbe8d7;
+                font-size: 1.4em;
+              
+              }
+
+              .val {
+                font: normal normal normal 1.2em/1.5em Montserrat;
+                letter-spacing: 0px;
+                color: #fafafa;
+                @media all and (max-width:1000px){
+                    font: normal normal normal 1.1em/1.5em Montserrat;
+                  
+                  }
+              }
+            }
+          }
+        }
+      }
+
+      &__form {
+        width: 65%;
+        align-items: flex-start;
+        @media all and (max-width:1202px){
+            width: 52%;
+            margin-top: 1em;
+        }
+        @media all and (max-width:1000px){
+            width:100%;
+        }
+        &__struct {
+          width: 90%;
+          margin-top: 2em;
+          margin-bottom: 2em;
+          @media all and (max-width:1000px){
+            margin-bottom: 0em;
+          }
+
+          .input_flex {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2em;
+            @media all and (max-width:1000px){
+              flex-direction: column;
+              margin-bottom: 0em;
+            }
+
+            .input {
+              display: block;
+              width: 47%;
+              @media all and (max-width:1000px){
+                width: 100%;
+                margin-bottom: 1.5em;
+              }
+              .input_title {
+                display: block;
+                font: normal normal normal 1.25em Montserrat;
+                letter-spacing: 0px;
+                color: #2b2b2b;
+                @media all and (max-width:1000px){
+                    font-size: 1em;
+                
+                  }
+              }
+              input{
+                display: block;
+                height: 40px;
+                width: 100%;
+                border: navajowhite;
+                border-bottom: 2px solid #707070B5;
+                color: $theme;
+                font-size: 1.5em;
+                font: normal normal normal 1.25em Poppins;
+                @media all and (max-width:1000px){
+                    font-size: 1.2em;
+                
+                  }
+              }
+
+              textarea{
+                display: block;
+                height: 150px;
+                width: 100%;
+                border: navajowhite;
+                border-bottom: 2px solid #707070B5;
+                color: $theme;
+                font-size: 1.5em;
+                font: normal normal normal 1.25em Poppins;
+                padding-top: 10px;
+                @media all and (max-width:1000px){
+                    font-size: 1.2em;
+                    height: 100px;
+                  }
+              }
+
+             
+            }
+            .long_input{
+                width: 100% !important;
+              }
+          }
+
+          &__btn {
+            font: normal normal normal 1em Alfa Slab One;
+            letter-spacing: 0px;
+            color: white;
+            text-transform: uppercase;
+            width: 100%;
+            height: 4.75em;
+            position: relative;
+            background: $theme;
+            border: 0.125em solid $theme;
+            border-radius: 4px;
+            transition: 0.3s;
+            overflow: hidden;
+            @media all and (max-width: 1279px) {
+              font: normal normal normal 0.8em Alfa Slab One;
+            }
+            @media all and (max-width: 1041px) {
+              border-radius: 10px;
+            }
+            @media all and (max-width: 520px) {
+              width: 100%;
+            }
+            span {
+              position: absolute;
+
+              width: 0px;
+              height: 0px;
+              background: $dark;
+              display: block;
+              top: 150%;
+              left: 50%;
+              border-radius: 50%;
+              transform: translateY(-50%) translateY(-50%) scale(0);
+              transition: 0.5s;
+              z-index: -1;
+            }
+
+            &:hover {
+              border: 0.125em solid rgba(0, 0, 0, 0);
+              transition: 0.3s;
+              color: #fafafa;
+              span {
+                transform: translateY(-50%) translateY(-50%) scale(5.5);
+                transition: 0.5s;
+                top: 50%;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.map_contact {
+  width: 100%;
+  &__struct {
+    display: block;
+    margin-top: 2em;
+    width: 95%;
+    height: 50vh;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 20px;
+    overflow: hidden;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

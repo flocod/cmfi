@@ -526,8 +526,20 @@ $("body").on("click", ".read", async () => {
 });
 
 
+$("body").on("click", ".contact-us", async () => {
+
+  $("#LOAD_CONTAINER").load("assets/contact.html", function () {
+
+    $("#LINK").load("assets/link.html", () => {
+      fn_owl_link();
+    });
+  });
+});
+
+
 $("body").on("click", ".NOHOME", () => {
   $("body").attr("page", "no-home");
+
 });
 
 $(document).ready(function () {
